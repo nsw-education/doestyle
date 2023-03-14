@@ -16,21 +16,13 @@ Devops git repository.
 From your terminal:
 
 ``` bash
-git clone https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle ~/doestyle
+git clone https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle
 ```
 
 … and then from `R`:
 
 ``` r
-remotes::install_local("~/doestyle")
-```
-
-Note that this will leave a checked-out copy of this repository in your
-home directory, which you may want to clean up (again from your
-terminal):
-
-``` bash
-rm -rf ~/doestyle
+remotes::install_local("path_to_where_you_cloned/doestyle")
 ```
 
 ## Example
