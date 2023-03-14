@@ -13,8 +13,24 @@ brand-compliant figures for NSW Department of Education publications.
 You can install the development version of doestyle from its Azure
 Devops git repository.
 
+From your terminal:
+
+``` bash
+git clone https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle ~/doestyle
+```
+
+… and then from `R`:
+
 ``` r
-remotes::install_git("https://dev.azure.com/doestyle/_git/doestyle")
+remotes::install_local("~/doestyle")
+```
+
+Note that this will leave a checked-out copy of this repository in your
+home directory, which you may want to clean up (again from your
+terminal):
+
+``` bash
+rm -rf ~/doestyle
 ```
 
 ## Example
