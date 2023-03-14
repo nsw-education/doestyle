@@ -1,4 +1,3 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # doestyle
@@ -33,4 +32,5 @@ diamonds |>
   scale_fill_doe()
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+![Example diamond plot with DoE
+fill](man/figures/README-fig-example.png)

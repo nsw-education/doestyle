@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  md_document:
+    variant: gfm 
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -32,7 +34,7 @@ remotes::install_git("https://dev.azure.com/doestyle/_git/doestyle")
 
 Apply the DoE colour palette to the fill aesthetic of a bar chart:
 
-```{r example, dpi=300}
+```{r example, eval = FALSE}
 library(ggplot2)
 library(doestyle)
 
@@ -42,3 +44,24 @@ diamonds |>
   # Use the DoE fill scale
   scale_fill_doe()
 ```
+
+```{r fig-example, echo = FALSE}
+# Workaround for Azure Devops requirements for markdown-syntax image embeds
+library(ggplot2)
+library(doestyle)
+
+fig_example <- diamonds |>
+  ggplot(aes(x = cut, fill = cut)) +
+  geom_bar() +
+  # Use the DoE fill scale
+  scale_fill_doe()
+
+ggsave(filename = "man/figures/README-fig-example.png",
+       plot = fig_example,
+       width = 16,
+       height = 8,
+       units = "cm")
+```
+
+![Example diamond plot with DoE fill](man/figures/README-fig-example.png)
+
