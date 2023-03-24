@@ -13,17 +13,19 @@ brand-compliant figures for NSW Department of Education publications.
 You can install the development version of doestyle from its Azure
 Devops git repository.
 
-From your terminal:
-
-``` bash
-git clone https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle
-```
-
-… and then from `R`:
+First, ensure that you have `remotes` installed:
 
 ``` r
-remotes::install_local("path_to_where_you_cloned/doestyle")
+install.packages("remotes")
 ```
+
+… then use `remotes` to install `doestyle` from its git repository:
+
+``` r
+remotes::install_git("https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle")
+```
+
+The same command can be used update `doestyle` to its latest version.
 
 ## Example
 
@@ -39,6 +41,8 @@ diamonds |>
   # Use the DoE fill scale
   scale_fill_doe()
 ```
+
+    #> Warning: package 'ggplot2' was built under R version 4.2.3
 
 ![Example diamond plot with DoE
 fill](man/figures/README-fig-example.png)
