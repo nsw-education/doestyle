@@ -25,7 +25,7 @@ install.packages("remotes")
 remotes::install_git("https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle")
 ```
 
-The same command can be used update `doestyle` to its latest version.
+The same command can be used to update `doestyle` to its latest version.
 
 ## Example
 
@@ -41,8 +41,6 @@ diamonds |>
   # Use the DoE fill scale
   scale_fill_doe()
 ```
-
-    #> Warning: package 'ggplot2' was built under R version 4.2.3
 
 ![Example diamond plot with DoE
 fill](man/figures/README-fig-example.png)

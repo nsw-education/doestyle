@@ -38,7 +38,7 @@ install.packages("remotes")
 remotes::install_git("https://doestyle@dev.azure.com/doestyle/doestyle/_git/doestyle")
 ```
 
-The same command can be used update `doestyle` to its latest version.
+The same command can be used to update `doestyle` to its latest version.
 
 ## Example
 
@@ -55,7 +55,7 @@ diamonds |>
   scale_fill_doe()
 ```
 
-```{r fig-example, echo = FALSE}
+```{r fig-example, echo = FALSE, warning = FALSE}
 # Workaround for Azure Devops requirements for markdown-syntax image embeds
 library(ggplot2)
 library(doestyle)
