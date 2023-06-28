@@ -77,7 +77,7 @@ At a later date, you will need to repeat both steps to update `doestyle` to its 
 
 Apply the DoE colour palette to the fill aesthetic of a bar chart:
 
-```{r example, warning = FALSE, message = FALSE, fig.width=5, fig.height=3, out.width="297px"}
+```{r example, warning = FALSE, message = FALSE, fig.width=5, fig.height=3, out.width="600px"}
 library(ggplot2)
 # Load doestyle
 library(doestyle)

@@ -92,4 +92,4 @@ Apply the DoE colour palette to the fill aesthetic of a bar chart:
       # Use the DoE fill scale
       scale_fill_doe()
 
-<img src="raw/man/figures/README-example-1.png" width="297px" />
+<img src="raw/man/figures/README-example-1.png" width="600px" />
