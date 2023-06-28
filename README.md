@@ -5,7 +5,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-`{doestyle}` is a collection of functions to help produce
+`{doestyle}` is an R package containing functions to help produce
 brand-compliant figures for NSW Department of Education publications.
 
 ## Installation
@@ -23,8 +23,7 @@ Bitbucket repository.
 
 **Prerequisites:**
 
-- Install the [Git version control system
-  installed](https://git-scm.com/).
+- Install the [Git version control system](https://git-scm.com/).
 - Install the [remotes R
   package](https://cran.r-project.org/package=remotes) with
   `install.packages("remotes")`
