@@ -11,7 +11,7 @@ brand-compliant figures for NSW Department of Education publications.
 ## Installation
 
 There are currently two installation options. Because `doestyle` is not
-on CRAN, it cannot be directly installed with the standard
+on yet on CRAN, it cannot be directly installed with the standard
 `install.packages` function. Instead, we can use the helper package
 [remotes](https://cran.r-project.org/package=remotes) to either install
 from BitBucket, or from a downloaded copy of the BitBucket repository.
@@ -23,25 +23,25 @@ Bitbucket repository.
 
 **Prerequisites:**
 
-- Install the [Git version control system](https://git-scm.com/).
-- Install the [remotes R
-  package](https://cran.r-project.org/package=remotes) with
-  `install.packages("remotes")`
+-   Install the [Git version control system](https://git-scm.com/).
+-   Install the [remotes R
+    package](https://cran.r-project.org/package=remotes) with
+    `install.packages("remotes")`
 
 **Steps:**
 
 1.  In R, use `remotes` to install `doestyle` from its Git repository on
     BitBucket. This will be easiest from an R console in RStudio:
 
-``` r
-remotes::install_git("https://bitbucket.det.nsw.edu.au/scm/does/doestyle.git",
-                     git = "external")
-```
+<!-- -->
+
+    remotes::install_git("https://bitbucket.det.nsw.edu.au/scm/does/doestyle.git",
+                         git = "external")
 
 For example:
 
 ![Example installation using
-remotes::install_local](man/figures/install_git.gif)
+remotes::install\_local](man/figures/install_git.gif)
 
 You may be prompted to authenticate with BitBucket in a new window. Your
 credentials will be your usual single-sign-on username and password.
@@ -52,9 +52,9 @@ The same command can be used to update `doestyle` to its latest version.
 
 **Prerequisites:**
 
-- Install the [remotes R
-  package](https://cran.r-project.org/package=remotes) with
-  `install.packages("remotes")`
+-   Install the [remotes R
+    package](https://cran.r-project.org/package=remotes) with
+    `install.packages("remotes")`
 
 **Steps:**
 
@@ -66,14 +66,14 @@ The same command can be used to update `doestyle` to its latest version.
     transform the path you noted, converting any backslashes (“\\”) to
     forward slashes (“/”).
 
-``` r
-remotes::install_local("C:/path/to/your_downloads_folder/doestyle-file-you-noted.zip")
-```
+<!-- -->
+
+    remotes::install_local("C:/path/to/your_downloads_folder/doestyle-file-you-noted.zip")
 
 For example:
 
 ![Example installation using
-remotes::install_local](man/figures/install_local.gif)
+remotes::install\_local](man/figures/install_local.gif)
 
 At a later date, you will need to repeat both steps to update `doestyle`
 to its latest version.
@@ -82,16 +82,14 @@ to its latest version.
 
 Apply the DoE colour palette to the fill aesthetic of a bar chart:
 
-``` r
-library(ggplot2)
-# Load doestyle
-library(doestyle)
+    library(ggplot2)
+    # Load doestyle
+    library(doestyle)
 
-diamonds |>
-  ggplot(aes(x = cut, fill = cut)) +
-  geom_bar() +
-  # Use the DoE fill scale
-  scale_fill_doe()
-```
+    diamonds |>
+      ggplot(aes(x = cut, fill = cut)) +
+      geom_bar() +
+      # Use the DoE fill scale
+      scale_fill_doe()
 
-<img src="raw/man/figures/README-example-1.png" width="100%" />
+<img src="raw/man/figures/README-example-1.png" width="297px" />

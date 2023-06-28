@@ -1,7 +1,6 @@
 ---
 output: 
-  md_document:
-    variant: gfm 
+  md_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -25,7 +24,7 @@ knitr::opts_knit$set(base.url = "raw/")
 
 ## Installation
 
-There are currently two installation options. Because `doestyle` is not on CRAN, it cannot be directly installed with the standard `install.packages` function. Instead, we can use the  helper package [remotes](https://cran.r-project.org/package=remotes) to either install from BitBucket, or from a downloaded copy of the BitBucket repository.
+There are currently two installation options. Because `doestyle` is not on yet on CRAN, it cannot be directly installed with the standard `install.packages` function. Instead, we can use the  helper package [remotes](https://cran.r-project.org/package=remotes) to either install from BitBucket, or from a downloaded copy of the BitBucket repository.
 
 ### Install directly from BitBucket
 
@@ -78,7 +77,7 @@ At a later date, you will need to repeat both steps to update `doestyle` to its 
 
 Apply the DoE colour palette to the fill aesthetic of a bar chart:
 
-```{r example, warning = FALSE, message = FALSE}
+```{r example, warning = FALSE, message = FALSE, fig.width=5, fig.height=3, out.width="297px"}
 library(ggplot2)
 # Load doestyle
 library(doestyle)
