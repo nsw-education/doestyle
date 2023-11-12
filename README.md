@@ -41,7 +41,7 @@ Bitbucket repository.
 For example:
 
 ![Example installation using
-remotes::install\_local](man/figures/install_git.gif)
+remotes::install\_local](https://bitbucket.org/nsw-education/doestyle/raw/93eef54df1a06528cf15dec71721eb9c541fc3e2/man/figures/install_git.gif)
 
 You may be prompted to authenticate with BitBucket in a new window. Your
 credentials will be your usual single-sign-on username and password.
@@ -54,7 +54,8 @@ The same command can be used to update `doestyle` to its latest version.
 
 -   Install the [remotes R
     package](https://cran.r-project.org/package=remotes) with
-    `install.packages("remotes")`
+
+`install.packages("remotes")`
 
 **Steps:**
 
@@ -68,12 +69,13 @@ The same command can be used to update `doestyle` to its latest version.
 
 <!-- -->
 
+
     remotes::install_local("C:/path/to/your_downloads_folder/doestyle-file-you-noted.zip")
 
 For example:
 
 ![Example installation using
-remotes::install\_local](man/figures/install_local.gif)
+remotes::install\_local](https://bitbucket.org/nsw-education/doestyle/raw/93eef54df1a06528cf15dec71721eb9c541fc3e2/man/figures/install_local.gif)
 
 At a later date, you will need to repeat both steps to update `doestyle`
 to its latest version.
@@ -81,6 +83,7 @@ to its latest version.
 ## Usage example
 
 Apply the DoE colour palette to the fill aesthetic of a bar chart:
+
 
     library(ggplot2)
     # Load doestyle
@@ -92,4 +95,4 @@ Apply the DoE colour palette to the fill aesthetic of a bar chart:
       # Use the DoE fill scale
       scale_fill_doe()
 
-<img src="raw/man/figures/README-example-1.png" width="600px" />
+<img src="https://bitbucket.org/nsw-education/doestyle/raw/93eef54df1a06528cf15dec71721eb9c541fc3e2/man/figures/README-example-1.png" width="600px" />
