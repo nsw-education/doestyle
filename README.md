@@ -27,7 +27,7 @@ from BitBucket, or from a downloaded copy of the BitBucket repository.
 
 **Steps:**
 
-1.  Download the current doestyle repository zip file using the "Download repository" link on this page's ... context menu.
+1.  Download the [current doestyle repository archive](https://bitbucket.org/nsw-education/doestyle/get/main.tar.gz).
     Note the path to the downloaded file.
 2.  In R, use `remotes::install_local` to install `doestyle` from the
     downloaded zip file. If you are using Windows, you will need to
