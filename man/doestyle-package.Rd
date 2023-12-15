@@ -6,10 +6,15 @@
 \alias{doestyle-package}
 \title{doestyle: Apply DoE style guide to ggplot figures}
 \description{
-What the package does (one paragraph).
+doestyle is an R package containing functions to help produce brand-compliant figures for NSW Department of Education publications.
 }
 \author{
 \strong{Maintainer}: Samuel Gardiner \email{samuel.gardiner7@det.nsw.edu.au} (\href{https://orcid.org/0000-0002-6752-6969}{ORCID})
+
+Authors:
+\itemize{
+  \item Matthew Finkbeiner \email{matthew.finkbeiner@det.nsw.edu.au}
+}
 
 }
 \keyword{internal}

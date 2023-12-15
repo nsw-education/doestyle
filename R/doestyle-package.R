@@ -2,6 +2,6 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @importFrom ggplot2 %+replace%
+#' @import ggplot2
 ## usethis namespace: end
 NULL

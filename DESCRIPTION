@@ -1,13 +1,19 @@
 Package: doestyle
 Title: Apply DoE style guide to ggplot figures
 Version: 0.0.0.9000
-Authors@R: 
-    person("Samuel", "Gardiner", , "samuel.gardiner7@det.nsw.edu.au", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-6752-6969"))
-Description: What the package does (one paragraph).
+Authors@R: c(
+    person("Samuel", "Gardiner", , "samuel.gardiner7@det.nsw.edu.au",
+          role = c("aut", "cre"),
+          comment = c(ORCID = "0000-0002-6752-6969")),
+    person("Matthew", "Finkbeiner", , "matthew.finkbeiner@det.nsw.edu.au",
+          role =  "aut")
+           )
+Description: doestyle is an R package containing functions to help produce 
+    brand-compliant figures for NSW Department of Education publications.
 License: MIT + file LICENSE
 Imports: 
     ggplot2,
+    glue,
     showtext,
     sysfonts
 Encoding: UTF-8
