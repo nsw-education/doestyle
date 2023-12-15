@@ -4,7 +4,7 @@
 \name{doestyle-package}
 \alias{doestyle}
 \alias{doestyle-package}
-\title{doestyle: What the Package Does (One Line, Title Case)}
+\title{doestyle: Apply DoE style guide to ggplot figures}
 \description{
 What the package does (one paragraph).
 }

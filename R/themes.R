@@ -1,14 +1,26 @@
 #' Apply the DoE theme to a ggplot2 plot
 #'
-#' @param base_size base font size, given in pts.
-#' @param ... arguments passed to theme_minimal
-#'
 #' @export
-theme_doe <- function(base_size = 12, ...){
-  ggplot2::theme_minimal(base_size = base_size, ...) %+replace%
-    ggplot2::theme(
-      panel.grid.major.x = element_blank(),
-      panel.grid.minor = element_blank(),
-      complete = TRUE
+theme_doe <- function(){
+
+  check_font_families()
+
+  font <- "Public Sans" # set font family first
+  theme_minimal() %+replace% # replace elements we want to change
+    theme(
+
+      #text elements
+      text = element_text(family = font,
+                          size = 16,
+                          color = "grey30"),
+
+      #grid elements
+      panel.grid.minor.y = element_blank(),
+      panel.grid.minor.x = element_blank(),
+
+      #legend elements  (may be better to do in individual plots)
+      legend.position = "bottom",
+      legend.text = element_text(size = rel(0.7)),
+      legend.title = element_text(size = rel(0.7))
     )
 }

@@ -4,12 +4,7 @@
 \alias{theme_doe}
 \title{Apply the DoE theme to a ggplot2 plot}
 \usage{
-theme_doe(base_size = 12, ...)
-}
-\arguments{
-\item{base_size}{base font size, given in pts.}
-
-\item{...}{arguments passed to theme_minimal}
+theme_doe()
 }
 \description{
 Apply the DoE theme to a ggplot2 plot

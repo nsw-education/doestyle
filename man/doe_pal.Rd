@@ -2,16 +2,19 @@
 % Please edit documentation in R/palette.R
 \name{doe_pal}
 \alias{doe_pal}
-\title{DoE colour palette}
+\title{Return function to interpolate a doe color palette
+Makes it possible to create shades between our original colours}
 \usage{
-doe_pal(n)
+doe_pal(palette = "default", reverse = FALSE, ...)
 }
 \arguments{
-\item{n}{}
-}
-\value{
-a character vector of hexadecimal colour codes, with length n
+\item{palette}{Character name of palette in doe_palettes}
+
+\item{reverse}{Boolean indicating whether the palette should be reversed}
+
+\item{...}{Additional arguments to pass to colorRampPalette()}
 }
 \description{
-DoE colour palette
+Return function to interpolate a doe color palette
+Makes it possible to create shades between our original colours
 }

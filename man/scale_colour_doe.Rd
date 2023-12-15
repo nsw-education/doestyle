@@ -2,13 +2,26 @@
 % Please edit documentation in R/scales.R
 \name{scale_colour_doe}
 \alias{scale_colour_doe}
-\title{Apply the DoE colour palette to the colour aesthetic}
+\title{Colour scale constructor for doe colors}
 \usage{
-scale_colour_doe(..., aesthetics = "colour")
+scale_colour_doe(
+  palette = c("default", "baby_blue_red", "navy_red", "light_shades", "two_blues",
+    "three_color", "red_to_blue"),
+  discrete = TRUE,
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
-\item{aesthetics}{}
+\item{palette}{Character name of palette in doe_palettes}
+
+\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+
+\item{reverse}{Boolean indicating whether the palette should be reversed}
+
+\item{...}{Additional arguments passed to discrete_scale() or
+scale_color_gradientn(), used respectively when discrete is TRUE or FALSE}
 }
 \description{
-Apply the DoE colour palette to the colour aesthetic
+Colour scale constructor for doe colors
 }
