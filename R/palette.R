@@ -1,11 +1,11 @@
-## define doe colors -------------------------------------------------------
-
-# define colors
-
-## 2023 February 22 NSW Government Masterbrand
+# Legacy colours:
 
 core_NSW_Blue="#002664"
 core_NSW_Red="#d7153a"
+
+# 2023 February 22 NSW Government Masterbrand
+# https://github.com/digitalnsw/nsw-design-system
+# https://github.com/digitalnsw/nsw-design-system/blob/master/src/core/colour/json/palettes.json
 
 NSW_MasterBrand_Grey01="#22272b"
 NSW_MasterBrand_Grey02="#495054"
@@ -56,6 +56,10 @@ NSW_MasterBrand_Brown01="#523719"
 NSW_MasterBrand_Brown02="#b68d5d"
 NSW_MasterBrand_Brown03="#e8d0b5"
 NSW_MasterBrand_Brown04="#ede3d7"
+
+# Additional colours used by the theme_doe_flex theme
+
+# The DoE palette is a subset of the NSW master brand palette
 
 doe_colors <- c(
   `navy`           = NSW_MasterBrand_Blue01,
