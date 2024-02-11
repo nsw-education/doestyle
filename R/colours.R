@@ -9,6 +9,12 @@ doestyle_cols <- with(colourdata,
 
 get_hex <- function(...) {
   cols <- c(...)
+  if (is.null(cols)) {
+    cli::cli_abort(c(
+      "x" = "At least one colour name must be supplied to {.code
+                   get_hex()}"))
+  }
+
   check_colour_names(cols)
   doestyle_cols[cols]
 }
