@@ -6,8 +6,7 @@
 #'
 #' @seealso [show_colours()]
 #'
-#' @source - NSW Design System
-#'   (https://github.com/digitalnsw/nsw-design-system/)
-#'  - Department of Education Brand guidelines document
-#'   (https://brand.education.nsw.gov.au/)
+#' @source - [NSW Design
+#'   System](https://github.com/digitalnsw/nsw-design-system/blob/deab23d17f68c799a669d3ee6d6089d9a8ff8a76/src/core/colour/json/palettes.json)
+#'  - Department of Education [Brand guidelines](https://brand.education.nsw.gov.au/)
 "colourdata"

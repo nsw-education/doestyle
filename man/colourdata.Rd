@@ -9,10 +9,8 @@ An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) w
 }
 \source{
 \itemize{
-\item NSW Design System
-(https://github.com/digitalnsw/nsw-design-system/)
-\item Department of Education Brand guidelines document
-(https://brand.education.nsw.gov.au/)
+\item \href{https://github.com/digitalnsw/nsw-design-system/blob/deab23d17f68c799a669d3ee6d6089d9a8ff8a76/src/core/colour/json/palettes.json}{NSW Design System}
+\item Department of Education \href{https://brand.education.nsw.gov.au/}{Brand guidelines}
 }
 }
 \usage{
