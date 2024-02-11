@@ -16,6 +16,7 @@ Imports:
     ggplot2,
     glue,
     officer,
+    purrr,
     showtext,
     sysfonts
 Encoding: UTF-8

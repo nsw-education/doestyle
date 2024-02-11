@@ -1,4 +1,4 @@
-#' Show swatches for doestyle colours
+#' Show swatches for `doestyle` colours
 #'
 #' `show_colours()` produces a plot that shows and names the colours available
 #' in `doestyle`.
@@ -27,7 +27,7 @@ show_colours <- function(swatches = c("brand", "primary", "nsw", "all")) {
     "nsw" = quote(nsw_brand),
     "all" = quote(TRUE),
     )
-  filterdata <- filter(colourdata, eval(filter_expr))
+  filterdata <- subset(colourdata, eval(filter_expr))
 
   # Print the desired swatches
   filterdata |>
@@ -37,7 +37,7 @@ show_colours <- function(swatches = c("brand", "primary", "nsw", "all")) {
               size = 9 / .pt) +
     facet_grid(tone ~ family, switch = "y") +
     scale_fill_manual(values = with(filterdata,
-                                    set_names(hex_value, colour_name))) +
+                                    purrr::set_names(hex_value, colour_name))) +
     theme_void() +
     theme(legend.position = "none",
           strip.text = element_text(size = 9))

@@ -2,7 +2,7 @@
 % Please edit documentation in R/show_colours.R
 \name{show_colours}
 \alias{show_colours}
-\title{Show swatches for doestyle colours}
+\title{Show swatches for \code{doestyle} colours}
 \usage{
 show_colours(swatches = c("brand", "primary", "nsw", "all"))
 }
