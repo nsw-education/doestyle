@@ -16,6 +16,7 @@ Imports:
     ggplot2,
     glue,
     officer,
+    purrr,
     showtext,
     sysfonts
 Encoding: UTF-8
@@ -24,5 +25,9 @@ RoxygenNote: 7.2.3
 Suggests: 
     fs,
     testthat (>= 3.0.0),
+    vdiffr,
     xml2
 Config/testthat/edition: 3
+Depends: 
+    R (>= 2.10)
+LazyData: true
