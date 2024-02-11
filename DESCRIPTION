@@ -13,10 +13,12 @@ Description: doestyle is an R package containing functions to help produce
 License: MIT + file LICENSE
 Imports: 
     cli,
+    dplyr,
     flextable,
     ggplot2,
     glue,
     officer,
+    palettes,
     purrr,
     showtext,
     sysfonts
