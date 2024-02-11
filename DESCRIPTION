@@ -12,6 +12,7 @@ Description: doestyle is an R package containing functions to help produce
     brand-compliant figures for NSW Department of Education publications.
 License: MIT + file LICENSE
 Imports: 
+    cli,
     flextable,
     ggplot2,
     glue,
