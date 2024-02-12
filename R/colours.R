@@ -7,16 +7,16 @@ doestyle_cols <- with(colourdata,
                       purrr::set_names(hex_value,
                                        colour_name))
 
-get_hex <- function(...) {
-  cols <- c(...)
-  if (is.null(cols)) {
+get_colours <- function(...) {
+  colour_names <- c(...)
+  if (is.null(colour_names)) {
     cli::cli_abort(c(
       "x" = "At least one colour name must be supplied to {.code
                    get_hex()}"))
   }
 
-  check_colour_names(cols)
-  doestyle_cols[cols]
+  check_colour_names(colour_names)
+  doestyle_cols[colour_names]
 }
 
 is_doestyle_colour_name <- function(colour_names) {
