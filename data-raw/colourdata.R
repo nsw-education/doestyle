@@ -45,7 +45,8 @@ doe_primary <- c("blue-01", "red-02", "blue-04", "white")
 
 colourdata <- bind_rows(nswpal, doe_extra) |>
   mutate(
-    hex_value = pal_color(hex_value),
+    hex_value = set_names(pal_color(hex_value),
+                          colour_name),
     doe_brand = colour_name %in% doe_brand,
     doe_primary = colour_name %in% doe_primary,
     as_tibble(`colnames<-`(t(col2rgb(hex_value)),
