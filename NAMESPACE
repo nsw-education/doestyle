@@ -2,6 +2,8 @@
 
 export(check_font_families)
 export(doe_pal)
+export(get_colours)
+export(list_doestyle_colours)
 export(scale_color_doe)
 export(scale_colour_doe)
 export(scale_fill_doe)
