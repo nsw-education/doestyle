@@ -1,8 +1,7 @@
-image: rocker/tidyverse:latest
-
-pipelines:
-  default:
-    - step:
+definintions:
+  steps:
+    - step: &build-test
+        name: Build and test package
         script:
           - cd /opt/atlassian/pipelines/agent/build
           - mkdir -p check/test-results
@@ -10,3 +9,9 @@ pipelines:
           - Rscript -e 'devtools::build()'
           - Rscript -e 'devtools::install(upgrade_dependencies = FALSE)'
           - Rscript -e 'devtools::check(check_dir = "/opt/atlassian/pipelines/agent/build/")'
+
+image: rocker/tidyverse:latest
+
+pipelines:
+  default:
+    - step: *build-test
