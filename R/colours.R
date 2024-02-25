@@ -79,3 +79,14 @@ check_colour_names <- function(colour_names) {
   }
 }
 
+#' Wrapper for `palettes::pal_colour()`
+#'
+#' Wraps the colour-creating function from package `palettes` so that it accepts
+#' NSW colour names instead of R colour names.
+#'
+#' @param colour_names A character vector of NSW colour names.
+#'
+#' @return A character vector of colour hex values.
+doe_colours <- function(colour_names) {
+  palettes::pal_colour(get_colours(colour_names))
+}
