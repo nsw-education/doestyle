@@ -17,3 +17,12 @@ image: rocker/tidyverse:latest
 pipelines:
   default:
     - step: *build-test
+    - step:
+        name: Deploy package to Bitbucket Downloads
+        script:
+          - mv *.tar.gz ${BITBUCKET_REPO_SLUG}_latest.tar.gz
+          - pipe: atlassian/bitbucket-upload-file:0.7.1
+            variables:
+              BITBUCKET_USERNAME: $BITBUCKET_USERNAME
+              BITBUCKET_APP_PASSWORD: $BITBUCKET_APP_PASSWORD
+              FILENAME: ${BITBUCKET_REPO_SLUG}_latest.tar.gz
