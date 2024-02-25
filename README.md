@@ -18,16 +18,27 @@ includes features that ease the use of brand colours and typesettig in
 
 `doestyle` can be installed with R’s standard `install.packages()`
 function. Because `doestyle` is not yet on CRAN, you will need to
-provide the URL for the downloadable package, which is hosted on
-Bitbucket. A Bitbucket account is not required.
+install its dependencies first, by following the instructions below.
 
-To install `doestyle` run the following command in your R console:
+To install `doestyle` run both of the following commands in your R
+console:
 
 ``` r
-install.packages("https://bitbucket.org/nsw-education/doestyle/downloads/doestyle_latest.tar.gz")
+# Install doestyle's dependencies from CRAN:
+install.packages(c("cli", "dplyr", "flextable", "ggplot2", "glue", "officer", "palettes", "purrr", "showtext", "sysfonts"),
+   type = "binary")
+# Install doestyle from its URL:
+install.packages("https://bitbucket.org/nsw-education/doestyle/downloads/doestyle_latest.tar.gz",
+   type = "source")
 ```
 
-The same command can be used to update `doestyle`.
+If you’re using RStudio on Windows and it prompts you to restart R
+before installing, select “No” - there is a [known RStudio
+issue](https://github.com/rstudio/rstudio/issues/2656) around
+reinstalling packages on Windows.
+
+The same commands can be used to update your installed version of
+`doestyle` if needed.
 
 ## Usage example
 
