@@ -11,7 +11,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 `{doestyle}` is an R package containing functions to help produce
 brand-compliant figures and tables for NSW Department of Education
 publications. It is currently under active development, but already
-includes features that ease the use of brand colours and typesettig in
+includes features that ease the use of brand colours and typesetting in
 `ggplot2` figures and `flextable` tables.
 
 ## Installation
