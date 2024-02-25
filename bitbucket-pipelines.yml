@@ -1,12 +1,32 @@
+definintions:
+  steps:
+    - step: &build-test
+        name: Build and test package
+        script:
+          - cd $BITBUCKET_CLONE_DIR
+          - mkdir -p check/test-results
+          - Rscript -e 'devtools::install_deps(".", dependencies=TRUE, upgrade=FALSE)'
+          - Rscript -e 'devtools::build(path = ".")'
+          - Rscript -e 'devtools::install(upgrade_dependencies = FALSE)'
+          - Rscript -e 'devtools::check(check_dir = "$BITBUCKET_CLONE_DIR")'
+        artifacts:
+          - '*.tar.gz'
+    - step: &deploy-latest
+        name: Deploy package to Bitbucket Downloads
+        script:
+          - mv *.tar.gz ${BITBUCKET_REPO_SLUG}_latest.tar.gz
+          - pipe: atlassian/bitbucket-upload-file:0.7.1
+            variables:
+              BITBUCKET_USERNAME: $BITBUCKET_USERNAME
+              BITBUCKET_APP_PASSWORD: $BITBUCKET_APP_PASSWORD
+              FILENAME: ${BITBUCKET_REPO_SLUG}_latest.tar.gz
+
 image: rocker/tidyverse:latest
 
 pipelines:
   default:
-    - step:
-        script:
-          - cd /opt/atlassian/pipelines/agent/build
-          - mkdir -p check/test-results
-          - Rscript -e 'devtools::install_deps(".", dependencies=TRUE, upgrade=FALSE)'
-          - Rscript -e 'devtools::build()'
-          - Rscript -e 'devtools::install(upgrade_dependencies = FALSE)'
-          - Rscript -e 'devtools::check(check_dir = "/opt/atlassian/pipelines/agent/build/")'
+    - step: *build-test
+  branches:
+    main:
+      - step: *build-test
+      - step: *deploy-latest
