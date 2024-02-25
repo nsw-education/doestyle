@@ -2,7 +2,7 @@
 % Please edit documentation in R/colours.R
 \name{list_doestyle_colours}
 \alias{list_doestyle_colours}
-\title{List valid doestyle colours and their hex values}
+\title{List valid NSW or DoE colours and their hex values}
 \usage{
 list_doestyle_colours()
 }
@@ -10,7 +10,7 @@ list_doestyle_colours()
 A tibble containing the names of valid colours and their hex values.
 }
 \description{
-List valid doestyle colours and their hex values
+List valid NSW or DoE colours and their hex values
 }
 \examples{
 list_doestyle_colours()

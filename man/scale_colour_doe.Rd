@@ -2,26 +2,47 @@
 % Please edit documentation in R/scales.R
 \name{scale_colour_doe}
 \alias{scale_colour_doe}
-\title{Colour scale constructor for doe colors}
+\title{Apply a DoE palette to the colour aesthetic}
 \usage{
 scale_colour_doe(
-  palette = c("default", "baby_blue_red", "navy_red", "light_shades", "two_blues",
-    "three_color", "red_to_blue"),
+  palette = doe_palettes$qualitative$default,
   discrete = TRUE,
-  reverse = FALSE,
+  direction = 1,
   ...
 )
 }
 \arguments{
-\item{palette}{Character name of palette in doe_palettes}
+\item{palette}{An object of class
+\code{\link[palettes:pal_palette]{palettes_palette}}. Several useful palettes are
+ready to use in the list \code{doe_palettes}, which is included with the
+\code{doestyle} package. The default is \code{doe_palettes$qualitative$default},
+which uses all of the on-brand red and blue colours defined in the NSW
+Department of Education Brand Guidelines. If you will be creating a
+continuous scale, palettes from within \code{doe_palettes$diverging} or
+\code{doe_palettes$sequential} will be more appropriate.}
 
-\item{discrete}{Boolean indicating whether color aesthetic is discrete or not}
+\item{discrete}{Logical indicating whether the desired scale should be
+discrete. The default is \code{TRUE}. If \code{FALSE}, a continuous scale with
+interpolated colours will be constructed, instead.}
 
-\item{reverse}{Boolean indicating whether the palette should be reversed}
+\item{direction}{Sets the order of colours in the scale. If 1, the default,
+colours are ordered from first to last as they appear in the palette. If
+-1, the order of colours is reversed.}
 
-\item{...}{Additional arguments passed to discrete_scale() or
-scale_color_gradientn(), used respectively when discrete is TRUE or FALSE}
+\item{...}{Additional arguments passed to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}} or
+\code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}}.}
+}
+\value{
+A scale function that can be added to a
+\link[ggplot2:ggplot2-package]{ggplot2} plot.
 }
 \description{
-Colour scale constructor for doe colors
+Apply a DoE palette to the colour aesthetic
+}
+\seealso{
+\itemize{
+\item \link{doe_palettes} for the palettes available in \code{doestyle}.
+\item \code{\link[palettes:scale_colour_palette_d]{palettes::scale_colour_palette_d()}}
+\item \code{\link[palettes:scale_colour_palette_d]{palettes::scale_colour_palette_c()}}
+}
 }

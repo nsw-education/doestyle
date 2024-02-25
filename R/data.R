@@ -10,3 +10,20 @@
 #'   System](https://github.com/digitalnsw/nsw-design-system/blob/deab23d17f68c799a669d3ee6d6089d9a8ff8a76/src/core/colour/json/palettes.json)
 #'  - Department of Education [Brand guidelines](https://brand.education.nsw.gov.au/)
 "colourdata"
+
+#' Palettes provided by `doestyle`
+#'
+#' A list of palettes, organised by type.
+#'
+#' - Qualitative: designed to show differences between nominal classes
+#' - Sequential: designed to show differences in ordered data that progress in
+#'    value from low to high (or vice versa)
+#' - Diverging: designed to show differences in ordered data that progress away
+#'    from a central value to extremes at either end of a scale
+#'
+#' Palettes can be accessed by their type and name.
+#' @examples
+#' doe_palettes$qualitative$default
+#' doe_palettes$sequential$blues
+#'
+"doe_palettes"

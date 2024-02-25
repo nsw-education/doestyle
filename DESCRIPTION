@@ -17,8 +17,8 @@ Imports:
     flextable,
     ggplot2,
     glue,
-    officer,
     palettes,
+    officer,
     purrr,
     showtext,
     sysfonts
