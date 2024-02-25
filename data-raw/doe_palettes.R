@@ -1,17 +1,21 @@
-## code to prepare `doe_palettes` dataset
+# Produces `doe_palettes` dataset
 
 library(doestyle)
 library(palettes)
-
-# Discrete  palettes ------------------------------------------------------
 
 qualitative <- palettes::pal_palette(
   default = get_colours("blue-01",
                         "red-02",
                         "blue-03",
                         "red-03",
+                        "grey-01",
                         "blue-02",
-                        "red-01")
+                        "red-01",
+                        "grey-02",
+                        "blue-04",
+                        "red-04",
+                        "grey-03",
+                        "grey-04")
 )
 
 sequential <- palettes::pal_palette(
