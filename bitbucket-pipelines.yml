@@ -11,13 +11,7 @@ definintions:
           - Rscript -e 'devtools::check(check_dir = "$BITBUCKET_CLONE_DIR")'
         artifacts:
           - '*.tar.gz'
-
-image: rocker/tidyverse:latest
-
-pipelines:
-  default:
-    - step: *build-test
-    - step:
+    - step: &deploy-latest
         name: Deploy package to Bitbucket Downloads
         script:
           - mv *.tar.gz ${BITBUCKET_REPO_SLUG}_latest.tar.gz
@@ -26,3 +20,13 @@ pipelines:
               BITBUCKET_USERNAME: $BITBUCKET_USERNAME
               BITBUCKET_APP_PASSWORD: $BITBUCKET_APP_PASSWORD
               FILENAME: ${BITBUCKET_REPO_SLUG}_latest.tar.gz
+
+image: rocker/tidyverse:latest
+
+pipelines:
+  default:
+    - step: *build-test
+  branches:
+    main:
+      - step: *build-test
+      - step: *deploy-latest
