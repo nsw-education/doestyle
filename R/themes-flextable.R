@@ -18,7 +18,7 @@ theme_doe_flextable <- function(x){
     flextable::height_all(height = 8,
                           part = "all",
                           unit = "mm") |>
-    flextable::color(color = doe_cols("navy"),
+    flextable::color(color = get_colours("blue-01"),
                      part = "header") |>
 
     # Apply the flextable zebra theme, first row transparent as per DoE brand
@@ -27,11 +27,11 @@ theme_doe_flextable <- function(x){
       odd_header = "transparent",
       odd_body = "transparent",
       even_header = "transparent",
-      even_body = "#F2F2F2") |> #DoE Grey 5 (5% tint); see Brand guidelines p77
+      even_body = get_colours("grey-5%")) |> # See Brand guidelines p.77
     flextable::line_spacing(space = 1, part = "all") |>
     flextable::hline_top(part = "body",
                          border = officer::fp_border(
-                           color = doe_cols("red"),
+                           color = get_colours("red-02"),
                            width = 2,
                            style = "solid"))
 
