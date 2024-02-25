@@ -1,6 +1,6 @@
-# Functions for working with doestyle colours
+# Functions for working with NSW and DoE named colours
 
-# Named character vector with every defined doestyle colour. See
+# Named character vector with every defined NSW colour. See
 # data-raw/colourdata.R to update if needed when the brand changes.
 data("colourdata")
 doestyle_cols <- with(colourdata,
@@ -34,7 +34,7 @@ get_colours <- function(...) {
   doestyle_cols[colour_names]
 }
 
-#' List valid doestyle colours and their hex values
+#' List valid NSW or DoE colours and their hex values
 #'
 #' @return A tibble containing the names of valid colours and their hex values.
 #' @export
