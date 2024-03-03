@@ -4,10 +4,8 @@
 #'   [`palettes_palette`][palettes::pal_palette()]. Several useful palettes are
 #'   ready to use in the list `doe_palettes`, which is included with the
 #'   `doestyle` package. The default is `doe_palettes$qualitative$default`,
-#'   which uses all of the on-brand red and blue colours defined in the NSW
-#'   Department of Education Brand Guidelines. If you will be creating a
-#'   continuous scale, palettes from within `doe_palettes$diverging` or
-#'   `doe_palettes$sequential` will be more appropriate.
+#'   which uses all of the on-brand colours defined in the NSW Department of
+#'   Education Brand Guidelines.
 #' @param discrete Logical indicating whether the desired scale should be
 #'   discrete. The default is `TRUE`. If `FALSE`, a continuous scale with
 #'   interpolated colours will be constructed, instead.
@@ -24,7 +22,7 @@
 #'  - [palettes::scale_colour_palette_c()]
 #'
 #' @export
-scale_colour_doe <- function(palette = doe_palettes$qualitative$default,
+scale_colour_doe <- function(palette = doe_palettes$default,
                              discrete = TRUE,
                              direction = 1,
                              ...) {
@@ -49,7 +47,7 @@ scale_colour_doe <- function(palette = doe_palettes$qualitative$default,
 #'  - [palettes::scale_fill_palette_d()]
 #'  - [palettes::scale_fill_palette_c()]
 #' @export
-scale_fill_doe <- function(palette = doe_palettes$qualitative$default,
+scale_fill_doe <- function(palette = doe_palettes$default,
                            discrete = TRUE,
                            direction = 1,
                            ...) {
