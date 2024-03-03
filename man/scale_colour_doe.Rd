@@ -5,7 +5,7 @@
 \title{Apply a DoE palette to the colour aesthetic}
 \usage{
 scale_colour_doe(
-  palette = doe_palettes$qualitative$default,
+  palette = doe_palettes$default,
   discrete = TRUE,
   direction = 1,
   ...
@@ -16,10 +16,8 @@ scale_colour_doe(
 \code{\link[palettes:pal_palette]{palettes_palette}}. Several useful palettes are
 ready to use in the list \code{doe_palettes}, which is included with the
 \code{doestyle} package. The default is \code{doe_palettes$qualitative$default},
-which uses all of the on-brand red and blue colours defined in the NSW
-Department of Education Brand Guidelines. If you will be creating a
-continuous scale, palettes from within \code{doe_palettes$diverging} or
-\code{doe_palettes$sequential} will be more appropriate.}
+which uses all of the on-brand colours defined in the NSW Department of
+Education Brand Guidelines.}
 
 \item{discrete}{Logical indicating whether the desired scale should be
 discrete. The default is \code{TRUE}. If \code{FALSE}, a continuous scale with
