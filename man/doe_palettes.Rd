@@ -25,13 +25,15 @@ from a central value to extremes at either end of a scale
 Palettes can be accessed by their type and name.
 }
 \examples{
+# Examine one palette at a time
 doe_palettes$default
 doe_palettes$seq.blues
 
-# List palettes and their colours
+# List all palettes and their colours
 print(doe_palettes)
 
-# Visualise palettes
+# If you've loaded `palettes`, visualise the available palettes
+library(palettes)
 plot(doe_palettes)
 }
 \keyword{datasets}
