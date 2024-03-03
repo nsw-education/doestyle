@@ -5,7 +5,7 @@
 \alias{doe_palettes}
 \title{Palettes provided by \code{doestyle}}
 \format{
-An object of class \code{list} of length 3.
+An object of class \code{palettes_palette} (inherits from \code{vctrs_list_of}, \code{vctrs_vctr}, \code{list}) of length 6.
 }
 \usage{
 doe_palettes
@@ -25,8 +25,15 @@ from a central value to extremes at either end of a scale
 Palettes can be accessed by their type and name.
 }
 \examples{
-doe_palettes$qualitative$default
-doe_palettes$sequential$blues
+# Examine one palette at a time
+doe_palettes$default
+doe_palettes$seq.blues
 
+# List all palettes and their colours
+print(doe_palettes)
+
+# If you've loaded `palettes`, visualise the available palettes
+library(palettes)
+plot(doe_palettes)
 }
 \keyword{datasets}

@@ -23,7 +23,14 @@
 #'
 #' Palettes can be accessed by their type and name.
 #' @examples
-#' doe_palettes$qualitative$default
-#' doe_palettes$sequential$blues
+#' # Examine one palette at a time
+#' doe_palettes$default
+#' doe_palettes$seq.blues
 #'
+#' # List all palettes and their colours
+#' print(doe_palettes)
+#'
+#' # If you've loaded `palettes`, visualise the available palettes
+#' library(palettes)
+#' plot(doe_palettes)
 "doe_palettes"

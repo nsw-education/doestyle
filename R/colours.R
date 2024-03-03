@@ -34,6 +34,16 @@ get_colours <- function(...) {
   doestyle_cols[colour_names]
 }
 
+#  Aliases for get_colours
+
+#' @rdname get_colours
+#' @export
+doe_colours <- get_colours
+
+#' @rdname get_colours
+#' @export
+doe_cols <- get_colours
+
 #' List valid NSW or DoE colours and their hex values
 #'
 #' @return A tibble containing the names of valid colours and their hex values.
@@ -77,16 +87,4 @@ check_colour_names <- function(colour_names) {
       colour names."
     ))
   }
-}
-
-#' Wrapper for `palettes::pal_colour()`
-#'
-#' Wraps the colour-creating function from package `palettes` so that it accepts
-#' NSW colour names instead of R colour names.
-#'
-#' @param colour_names A character vector of NSW colour names.
-#'
-#' @return A character vector of colour hex values.
-doe_colours <- function(colour_names) {
-  palettes::pal_colour(get_colours(colour_names))
 }

@@ -2,9 +2,15 @@
 % Please edit documentation in R/colours.R
 \name{get_colours}
 \alias{get_colours}
+\alias{doe_colours}
+\alias{doe_cols}
 \title{Get brand colours by name}
 \usage{
 get_colours(...)
+
+doe_colours(...)
+
+doe_cols(...)
 }
 \arguments{
 \item{...}{Colour name(s). May be supplied as a character vector or as
