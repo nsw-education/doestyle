@@ -1,6 +1,6 @@
 Package: doestyle
 Title: Apply DoE style guide to ggplot figures
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("Samuel", "Gardiner", , "samuel.gardiner7@det.nsw.edu.au",
           role = c("aut", "cre"),
