@@ -4,7 +4,7 @@
 \name{doestyle-package}
 \alias{doestyle}
 \alias{doestyle-package}
-\title{doestyle: Apply DoE style guide to ggplot figures}
+\title{doestyle: Apply Department of Education branding to figures and tables}
 \description{
 doestyle is an R package containing functions to help produce brand-compliant figures for NSW Department of Education publications.
 }
