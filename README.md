@@ -30,15 +30,14 @@ The same command can be used to update your installed version of
 `doestyle`.
 
 If you’re using RStudio on Windows and it prompts you to restart R
-before installing, it os safer to choose “No” - there is a [known
+before installing, it is safer to choose “No” - there is a [known
 RStudio issue](https://github.com/rstudio/rstudio/issues/2656) around
 reinstalling packages on Windows.
 
 ## Usage examples
 
 The following examples use data from the [Public Schools Master
-Dataset](https://data.nsw.gov.au/search/dataset/ds-nsw-ckan-78c10ea3-8d04-4c9c-b255-bbf8547e37e7/)
-and the.
+Dataset](https://data.nsw.gov.au/search/dataset/ds-nsw-ckan-78c10ea3-8d04-4c9c-b255-bbf8547e37e7/).
 
 ``` r
 library(tidyverse)
