@@ -66,6 +66,9 @@ schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
   ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
   geom_point() +
+  # Add a default department scale to the `colour` aesthetic. Note that `colour`
+  # has already been mapped onto the value of `Intensive_english_centre` in this
+  # plot's aesthetic mapping.
   scale_colour_doe()
 ```
 
@@ -84,6 +87,9 @@ schools |>
   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
   theme(legend.position = "bottom") +
   labs(y = "Schools") +
+  # Add a default department scale to the `fill` aesthetic. Note that `fill` has
+  # already been mapped onto the value of `Level_of_schooling` in this plot's
+  # aesthetic mapping.
   scale_fill_doe()
 ```
 
@@ -138,6 +144,7 @@ colourdata |>
 The available colours can also be visualised with `show_colours()`.
 
 ``` r
+# Show swatches for the department's brand colours:
 show_colours("brand")
 ```
 
@@ -146,6 +153,7 @@ show_colours("brand")
 To look up hex values, use `doe_colours()`:
 
 ``` r
+# Return hex values for named NSW Government colours:
 doe_colours("blue-01", "red-02")
 #> <palettes_colour[2]>
 #> • #002664
@@ -176,6 +184,7 @@ schools |>
   ggplot(aes(x = year, y = n)) +
   geom_step() +
   labs(x = "Year", y = "Government schools opened") +
+  # Apply a minimalist theme that uses the Public Sans typeface
   theme_doe()
 ```
 
@@ -211,8 +220,10 @@ Custom palettes are easy to create with the assistance of `pal_colour()`
 from the [`palettes`](https://mccarthy-m-g.github.io/palettes/) package.
 
 ``` r
+# Load `palettes`
 library(palettes)
 
+# Define a custom palette, using named NSW Government colours.
 my_custom_doe_palette <- pal_colour(
   doe_colours("blue-02", "grey-02", "red-02"))
 
@@ -223,6 +234,9 @@ schools |>
              alpha = School_gender)) +
   geom_point() +
   scale_alpha_manual(values =  c(1, 0.1, 1)) +
+  # Apply our custom palette to the `colour` aesthetic. Note that `colour` has
+  # already been mapped onto the value of `School_gender` in this plot's
+  # aesthetic mapping.
   scale_colour_doe(my_custom_doe_palette)
 ```
 
