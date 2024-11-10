@@ -1,16 +1,18 @@
 #' Apply the DoE theme to a ggplot2 plot
 #'
-#' Apply a minimalist theme.
+#' Apply a minimalist DoE theme. By default, sets the font family to Public Sans
+#' and enables [showtext::showtext_auto()] to allow easy font display in plots.
 #'
 #' @param base_size Base font size, given in pts.
 #' @param base_family Base font family. Defaults to the NSW Government on-brand
 #'   font family, [Public Sans](https://github.com/uswds/public-sans).
-#' @param ... Other parameters passed to `ggplot2::theme_minimal()`.
+#' @param ... Other parameters passed to [ggplot2::theme_minimal()].
 #'
 #' @export
 theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
 
-  check_font_families()
+  # Check that Public Sans is available and issue a warning if it isn't
+  if (base_family == "Public Sans") check_font_families()
 
   font <- base_family
   theme_minimal(...) %+replace%
