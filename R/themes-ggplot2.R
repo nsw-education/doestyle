@@ -1,27 +1,34 @@
 #' Apply the DoE theme to a ggplot2 plot
 #'
+#' Apply a minimalist theme.
+#'
+#' @param base_size Base font size, given in pts.
+#' @param base_family Base font family. Defaults to the NSW Government on-brand
+#'   font family, [Public Sans](https://github.com/uswds/public-sans).
+#' @param ... Other parameters passed to `ggplot2::theme_minimal()`.
+#'
 #' @export
 theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
 
   check_font_families()
 
-  font <- base_family # set font family first
-  theme_minimal(...) %+replace% # replace elements we want to change
+  font <- base_family
+  theme_minimal(...) %+replace%
     theme(
-
-      #text elements
+      # Text elements
       text = element_text(family = font,
                           size = base_size,
                           color = "grey30"),
 
-      #grid elements
+      # Grid elements
       panel.grid.minor.y = element_blank(),
       panel.grid.minor.x = element_blank(),
 
-      #legend elements  (may be better to do in individual plots)
+      # Legend elements
       legend.position = "bottom",
       legend.text = element_text(size = rel(0.7)),
       legend.title = element_text(size = rel(0.7)),
+
       ...
     )
 }

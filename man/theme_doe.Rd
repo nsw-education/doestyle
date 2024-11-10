@@ -4,8 +4,16 @@
 \alias{theme_doe}
 \title{Apply the DoE theme to a ggplot2 plot}
 \usage{
-theme_doe()
+theme_doe(base_size = 16, base_family = "Public Sans", ...)
+}
+\arguments{
+\item{base_size}{Base font size, given in pts.}
+
+\item{base_family}{Base font family. Defaults to the NSW Government on-brand
+font family, \href{https://github.com/uswds/public-sans}{Public Sans}.}
+
+\item{...}{Other parameters passed to \code{ggplot2::theme_minimal()}.}
 }
 \description{
-Apply the DoE theme to a ggplot2 plot
+Apply a minimalist theme.
 }
