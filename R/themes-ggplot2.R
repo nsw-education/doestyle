@@ -16,7 +16,7 @@ theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
 
 
   font <- base_family # set font family first
-  theme_minimal(...) %+replace% # replace elements we want to change
+  theme_minimal() %+replace% # replace elements we want to change
     theme(
       # Text elements
       text = element_text(family = font,
