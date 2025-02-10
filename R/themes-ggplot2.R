@@ -6,7 +6,7 @@
 #' @param base_size Base font size, given in pts.
 #' @param base_family Base font family. Defaults to the NSW Government on-brand
 #'   font family, [Public Sans](https://github.com/uswds/public-sans).
-#' @param ... Other parameters passed to [ggplot2::theme_minimal()].
+#' @param ... Other parameters passed to [ggplot2::theme()].
 #'
 #' @export
 theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
@@ -14,8 +14,9 @@ theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
   # Check that Public Sans is available and issue a warning if it isn't
   if (base_family == "Public Sans") check_font_families()
 
-  font <- base_family
-  theme_minimal(...) %+replace%
+
+  font <- base_family # set font family first
+  theme_minimal() %+replace% # replace elements we want to change
     theme(
       # Text elements
       text = element_text(family = font,
@@ -30,7 +31,6 @@ theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
       legend.position = "bottom",
       legend.text = element_text(size = rel(0.7)),
       legend.title = element_text(size = rel(0.7)),
-
       ...
     )
 }

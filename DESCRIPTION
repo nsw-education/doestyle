@@ -1,6 +1,6 @@
 Package: doestyle
 Title: Apply Department of Education branding to figures and tables
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person("Samuel", "Gardiner", , "samuel.gardiner7@det.nsw.edu.au",
           role = c("aut", "cre"),
@@ -24,9 +24,14 @@ Imports:
     sysfonts
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: 
     fs,
+    knitr,
+    qpdf,
+    quarto,
+    readr,
+    stringr,
     testthat (>= 3.0.0),
     vdiffr,
     xml2
@@ -34,3 +39,4 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 LazyData: true
+VignetteBuilder: quarto

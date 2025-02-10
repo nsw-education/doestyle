@@ -22,8 +22,8 @@ from Bitbucket with the `remotes` package:
 # Install `remotes` if needed
 if (!require("remotes")) install.packages("remotes")
 
-# Install doestyle, using `remotes`
-remotes::install_bitbucket("nsw-education/doestyle")
+# Install doestyle and its documentation using `remotes`
+remotes::install_bitbucket("nsw-education/doestyle", build_vignettes = TRUE)
 ```
 
 The same command can be used to update your installed version of

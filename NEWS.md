@@ -1,3 +1,8 @@
+# doestyle 0.2.1
+
+* Pass arguments from `theme_doe()` to `ggplot2::theme()` via `...`
+* Added vignette "Extending `theme_doe()`" with examples
+
 # doestyle 0.2.0
 
 * Added optional arguments to `theme_doe()` to allow specification of fonts

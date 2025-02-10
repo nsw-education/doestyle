@@ -1,0 +1,73 @@
+---
+title: "Extending `theme_doe()`"
+author: "Matthew Finkbeiner"
+vignette: >
+  %\VignetteIndexEntry{Extending theme_doe()}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: '#>'
+---
+
+This vignette provides examples of customising plot output using `theme_doe()`.
+
+## Setup
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+library(doestyle)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(stringr)
+```
+
+## Examples
+
+Read in some data: the Public Schools Master dataset
+
+```{r}
+#| label: data-setup
+#| warning: false
+schools <- read_csv("https://data.nsw.gov.au/data/dataset/78c10ea3-8d04-4c9c-b255-bbf8547e37e7/resource/3e6d5f6a-055c-440d-a690-fc0537c31095/download/master_dataset.csv",
+                    col_types = cols(
+                      .default = col_guess(),
+                      LBOTE_pct = col_double(),
+                      Indigenous_pct = col_double()
+                    ))
+```
+
+Typical use of `theme_doe()` and `scale_fill_doe()`:
+
+```{r}
+#| label: typical-use
+schools |>
+  filter(str_detect(Principal_network, "Connected Communities")) |>
+  ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
+  geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
+  theme_doe() +
+  labs(y = "Schools", x = "") +
+  scale_fill_doe()
+```
+Modify angle and colour of axis text, and orientation of legend, by adding arguments to the call to `theme_doe()`. See `ggplot2::theme()` for a complete list of arguments that can be passed to `theme_doe()`.
+
+```{r}
+#| label: extending-theme-doe
+schools |>
+  filter(str_detect(Principal_network, "Connected Communities")) |>
+  ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
+  geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
+  theme_doe(axis.text.x = element_text(color = 'blue', 
+                                       angle = 15, # add angle to x-axis labels
+                                       hjust = 0.75,
+                                       vjust = 1), 
+            axis.title.y = element_text(color = 'blue',
+                                        angle = 0), # rotate y-axis title
+            legend.direction = "vertical") + # stack legend text vertically
+  labs(y = "Schools", x = "") +
+  scale_fill_doe()
+```

@@ -1,4 +1,4 @@
-definintions:
+definitions:
   steps:
     - step: &build-test
         name: Build and test package
@@ -8,7 +8,7 @@ definintions:
           - Rscript -e 'devtools::install_deps(".", dependencies=TRUE, upgrade=FALSE)'
           - Rscript -e 'devtools::build(path = ".")'
           - Rscript -e 'devtools::install(upgrade_dependencies = FALSE)'
-          - Rscript -e 'devtools::check(check_dir = "$BITBUCKET_CLONE_DIR")'
+          - Rscript -e 'devtools::check(cran = FALSE, check_dir = "$BITBUCKET_CLONE_DIR")'
         artifacts:
           - '*.tar.gz'
     - step: &deploy-latest
