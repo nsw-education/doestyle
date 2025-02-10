@@ -19,8 +19,11 @@ This vignette provides examples of customising plot output using `theme_doe()`.
 #| label: setup
 #| message: false
 #| warning: false
-library(tidyverse)
 library(doestyle)
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(stringr)
 ```
 
 ## Examples
