@@ -1,3 +1,5 @@
+# doestyle 0.2.1
+
 # doestyle 0.2.0
 
 * Added optional arguments to `theme_doe()` to allow specification of fonts

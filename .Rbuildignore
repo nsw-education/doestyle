@@ -4,3 +4,5 @@
 ^README\.Rmd$
 bitbucket-pipelines.yml
 ^data-raw$
+^vignettes/\.quarto$
+^vignettes/*_files$

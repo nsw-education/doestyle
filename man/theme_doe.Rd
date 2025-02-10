@@ -12,7 +12,7 @@ theme_doe(base_size = 16, base_family = "Public Sans", ...)
 \item{base_family}{Base font family. Defaults to the NSW Government on-brand
 font family, \href{https://github.com/uswds/public-sans}{Public Sans}.}
 
-\item{...}{Other parameters passed to \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}}.}
+\item{...}{Other parameters passed to \code{\link[ggplot2:theme]{ggplot2::theme()}}.}
 }
 \description{
 Apply a minimalist DoE theme. By default, sets the font family to Public Sans
