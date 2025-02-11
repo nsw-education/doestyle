@@ -1,6 +1,6 @@
 Package: doestyle
 Title: Apply Department of Education branding to figures and tables
-Version: 0.2.1
+Version: 0.2.1.9000
 Authors@R: c(
     person("Samuel", "Gardiner", , "samuel.gardiner7@det.nsw.edu.au",
           role = c("aut", "cre"),
@@ -31,6 +31,7 @@ Suggests:
     qpdf,
     quarto,
     readr,
+    rmarkdown,
     stringr,
     testthat (>= 3.0.0),
     vdiffr,
@@ -39,4 +40,4 @@ Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
 LazyData: true
-VignetteBuilder: quarto
+VignetteBuilder: knitr
