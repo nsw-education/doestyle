@@ -1,3 +1,8 @@
+# doestyle 0.2.2
+
+* Include example dataset `public_schools`
+* Switch vignette renderer to knitr, to avoid package installation problems on some systems.
+
 # doestyle 0.2.1
 
 * Pass arguments from `theme_doe()` to `ggplot2::theme()` via `...`

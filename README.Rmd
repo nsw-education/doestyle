@@ -43,19 +43,14 @@ If you're using RStudio on Windows and it prompts you to restart R before instal
 
 ## Usage examples
 
-The following examples use data from the [Public Schools Master Dataset](https://data.nsw.gov.au/search/dataset/ds-nsw-ckan-78c10ea3-8d04-4c9c-b255-bbf8547e37e7/).
+The following examples use data from the [Public Schools Master Dataset](https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset), which is available as a package dataset named `public_schools`.
 
 ```{r}
 library(tidyverse)
 library(doestyle)
 
-# Read the Public Schools Master Dataset
-schools <- read_csv("https://data.nsw.gov.au/data/dataset/78c10ea3-8d04-4c9c-b255-bbf8547e37e7/resource/3e6d5f6a-055c-440d-a690-fc0537c31095/download/master_dataset.csv",
-                    col_types = cols(
-                      .default = col_guess(),
-                      LBOTE_pct = col_double(),
-                      Indigenous_pct = col_double()
-                    ))
+# The Public Schools Master Dataset
+head(public_schools)
 ```
 
 ### Quick branding
@@ -65,7 +60,7 @@ schools <- read_csv("https://data.nsw.gov.au/data/dataset/78c10ea3-8d04-4c9c-b25
 For a default colour scale, apply `scale_colour_doe()` with no arguments:
 
 ```{r fig-lbote-foei-iec-scatter}
-schools |>
+public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
   ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
   geom_point() +
@@ -79,7 +74,7 @@ An on-brand default fill scale can be applied with `scale_fill_doe()`. Be aware 
 
 
 ```{r fig-connected-communities}
-schools |>
+public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
@@ -125,7 +120,7 @@ doe_colours("blue-01", "red-02")
 These values can be used in base R plotting functions, if you are not a ggplot2 user:
 
 ```{r fig-base-hist}
-hist(schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
+hist(public_schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
 ```
 
 ### Theming
@@ -133,7 +128,7 @@ hist(schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
 `doestyle` currently contains one ggplot2 theme, `theme_doe()`. It uses minimal non-data ink, and sets the default font to Public Sans, the department's primary brand font face. The theme is not currently very attractive - but you can help make it better by contributing to `doestyle`!
 
 ```{r fig-theme-doe}
-schools |>
+public_schools |>
   group_by(year = year(Date_1st_teacher)) |>
   count() |>
   ggplot(aes(x = year, y = n)) +
@@ -163,7 +158,7 @@ library(palettes)
 my_custom_doe_palette <- pal_colour(
   doe_colours("blue-02", "grey-02", "red-02"))
 
-schools |>
+public_schools |>
   ggplot(aes(x = Date_1st_teacher,
              y = latest_year_enrolment_FTE,
              colour = School_gender,

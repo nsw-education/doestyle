@@ -37,19 +37,31 @@ reinstalling packages on Windows.
 ## Usage examples
 
 The following examples use data from the [Public Schools Master
-Dataset](https://data.nsw.gov.au/search/dataset/ds-nsw-ckan-78c10ea3-8d04-4c9c-b255-bbf8547e37e7/).
+Dataset](https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset),
+which is available as a package dataset named `public_schools`.
 
 ``` r
 library(tidyverse)
 library(doestyle)
 
-# Read the Public Schools Master Dataset
-schools <- read_csv("https://data.nsw.gov.au/data/dataset/78c10ea3-8d04-4c9c-b255-bbf8547e37e7/resource/3e6d5f6a-055c-440d-a690-fc0537c31095/download/master_dataset.csv",
-                    col_types = cols(
-                      .default = col_guess(),
-                      LBOTE_pct = col_double(),
-                      Indigenous_pct = col_double()
-                    ))
+# The Public Schools Master Dataset
+head(public_schools)
+#> # A tibble: 6 × 45
+#>   School_code AgeID School_name   Street Town_suburb Postcode Phone School_Email
+#>   <chr>       <chr> <chr>         <chr>  <chr>       <chr>    <chr> <chr>       
+#> 1 5423        <NA>  John Brotchi… 1361 … Botany      2019     9316… johnbrotch-…
+#> 2 8600        86659 Secondary Co… Level… Parramatta  2150     02 7… SCLanguages…
+#> 3 8473        46360 Chifley Coll… 67 No… MOUNT DRUI… 2770     9625… chifcolsnr-…
+#> 4 8325        46407 Moree Second… Alber… Moree       2400     6752… mscalberts-…
+#> 5 8870        46426 St Marys Sen… Kalan… St Marys    2760     9623… stmaryssen-…
+#> 6 8374        46489 Brisbane Wat… 25 ED… WOY WOY     2256     4341… woywoy-h.sc…
+#> # ℹ 37 more variables: Website <chr>, Fax <chr>,
+#> #   latest_year_enrolment_FTE <dbl>, Indigenous_pct <dbl>, LBOTE_pct <dbl>,
+#> #   ICSEA_value <dbl>, Level_of_schooling <chr>, Selective_school <chr>,
+#> #   Opportunity_class <chr>, School_specialty_type <chr>, School_subtype <chr>,
+#> #   Support_classes <lgl>, Preschool_ind <chr>, Distance_education <chr>,
+#> #   Intensive_english_centre <chr>, School_gender <chr>,
+#> #   Late_opening_school <chr>, Date_1st_teacher <date>, LGA <chr>, …
 ```
 
 ### Quick branding
@@ -62,7 +74,7 @@ For a default colour scale, apply `scale_colour_doe()` with no
 arguments:
 
 ``` r
-schools |>
+public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
   ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
   geom_point() +
@@ -81,7 +93,7 @@ accessibility requirements for
 contrast](https://brand.education.nsw.gov.au/content/edam/en/brand-guideline.html).
 
 ``` r
-schools |>
+public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
@@ -164,7 +176,7 @@ These values can be used in base R plotting functions, if you are not a
 ggplot2 user:
 
 ``` r
-hist(schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
+hist(public_schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
 ```
 
 <img src="./man/figures/README-fig-base-hist-1.png" width="100%" />
@@ -178,7 +190,7 @@ attractive - but you can help make it better by contributing to
 `doestyle`!
 
 ``` r
-schools |>
+public_schools |>
   group_by(year = year(Date_1st_teacher)) |>
   count() |>
   ggplot(aes(x = year, y = n)) +
@@ -227,7 +239,7 @@ library(palettes)
 my_custom_doe_palette <- pal_colour(
   doe_colours("blue-02", "grey-02", "red-02"))
 
-schools |>
+public_schools |>
   ggplot(aes(x = Date_1st_teacher,
              y = latest_year_enrolment_FTE,
              colour = School_gender,
