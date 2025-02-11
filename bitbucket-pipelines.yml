@@ -8,7 +8,7 @@ definitions:
           - Rscript -e 'devtools::install_deps(".", dependencies=TRUE, upgrade=FALSE)'
           - Rscript -e 'devtools::build(path = ".")'
           - Rscript -e 'devtools::install(upgrade_dependencies = FALSE)'
-          - Rscript -e 'devtools::check(cran = FALSE, check_dir = "$BITBUCKET_CLONE_DIR")'
+          - Rscript -e 'devtools::check(cran = FALSE, check_dir = ".")'
         artifacts:
           - '*.tar.gz'
     - step: &deploy-latest
