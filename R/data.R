@@ -34,3 +34,11 @@
 #' library(palettes)
 #' plot(doe_palettes)
 "doe_palettes"
+
+#' The New South Wales Education Public Schools Master Dataset
+#'
+#' The master dataset contains comprehensive information for all government schools in NSW. Data items include school locations, latitude and longitude coordinates, school type, student enrolment numbers, electorate information, contact details and more.
+#' This dataset is publicly available through the [Data NSW website](https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset).
+#'
+#' @source <https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset>
+"public_schools"
