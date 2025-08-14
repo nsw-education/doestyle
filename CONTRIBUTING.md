@@ -2,7 +2,7 @@
 
 When contributing to `doestyle`, please discuss the change you wish to make via the [project's kanban board](https://nsw-education.atlassian.net/jira/software/c/projects/DOES/boards/1013), in [its Teams channel](https://teams.microsoft.com/l/channel/19%3Ab8e6ff4d3c1b4d9ebcba76af4e8c0f42%40thread.tacv2/doestyle?groupId=1c2dd9eb-a6ae-4724-b4e1-25838f4c126a&tenantId=05a0e69a-418a-47c1-9c25-9387261bf991), or even [email](mailto:samuel.gardiner7@det.nsw.edu.au;Jonathan.McGuire1@det.nsw.edu.au).
 
-If you're not sure how to get started, please read **Setting up your development environment**, **Contribution workflow - tutorial** and watch the video walkthrough. If you're comfortable with Git and with working on open source software, you can probably skip down to **Conventions**.
+If you're not sure how to get started, please read [Setting up your development environment](#markdown-header-setting-up-your-development-environment), [Contribution workflow - tutorial](#markdown-header-contribution-workflow-tutorial) and watch [the video walkthrough](https://schoolsnsw.sharepoint.com/:v:/s/DataVisWorkingGroup/EYthJPlfW4ZOhP-6aT0JrMABgWWB2bX_sEOVSlPMwlZwWg?e=OxCP6i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D). If you're comfortable with Git and with working on open source software, you can probably skip down to [Conventions](#markdown-header-conventions).
 
 ## Code of Conduct
 
@@ -27,9 +27,13 @@ You'll generally only need to clone the repository once. In the future, when you
 
 ## Contribution workflow - tutorial
 
-There are many workflows that will achieve similar outcomes, but this is a simple approach to contributing a feature or a bugfix. This is also similar to the workflow used by most open source software in the wild.
+There are many workflows that will achieve similar outcomes, but this is a simple approach to contributing a feature or a bugfix. This is also similar to the workflow used by most open source software in the wild. The general process will be:
 
-The accompanying video tutorial demonstrates this workflow.
+1. Create a branch for your work
+2. Work on your new branch in RStudio
+3. Open a Bitbucket pull request to merge your work into `doestyle`
+
+The [accompanying video tutorial](https://schoolsnsw.sharepoint.com/:v:/s/DataVisWorkingGroup/EYthJPlfW4ZOhP-6aT0JrMABgWWB2bX_sEOVSlPMwlZwWg?e=OxCP6i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) demonstrates this workflow.
 
 If at any point you are prompted by Git or Bitbucket to log in, choose 'Authenticate with browser' and log in using the usual DoE single-sign-on process.
 
@@ -39,40 +43,40 @@ Because `doestyle` is in use, we make changes in new Git branches, rather than c
 
 Select or create an issue from the [`doestyle` Jira kanban board](https://nsw-education.atlassian.net/jira/software/c/projects/DOES/boards/1013), and using the Jira interface, create a new Git branch for your work:
 
-- Click on the issue in Jira to open it.
-- In the issue's right-hand 'Details' panel, under 'Development', click 'Create branch' and then 'Create branch in Bitbucket Cloud'.
-- Add some details for your new branch and click 'Create':
+1. Click on the issue in Jira to open it.
+2. In the issue's right-hand 'Details' panel, under 'Development', click 'Create branch' and then 'Create branch in Bitbucket Cloud'.
+3. Add some details for your new branch and click 'Create':
     - 'Repository' should already be set to `nsw-education/doestyle`.
     - Set the 'Type' as appropriate for what you want to work on - most likely 'Feature' or 'Bugfix'.
     - The 'From branch' should almost always be 'main', in our current branching model. This represents the starting state of your new branch.
     - 'Branch name' will have an automatic name based on the Jira issue you chose, but you can alter it to make it shorter or more readable. Make sure you leave the issue ID (e.g. `DOES-XX`) intact at the front of the branch name, as this helps link your code to the Jira issue.
 
-### Work on your new content in RStudio
+### Work on your new branch in RStudio
 
-- Open the `doestyle` RStudio project that you cloned in [Setting up your development environment](#setting-up-your-development-environment), above.
-- Run `git pull` or `git fetch` to retrieve the current state of the repository. The easiest way to do this is to click 'Pull' in RStudio's Git pane.
-- Switch to your new branch. The easiest way to do this is in the RStudio Git pane:
+1. Open the `doestyle` RStudio project that you cloned in [Setting up your development environment](#markdown-header-setting-up-your-development-environment), above.
+2. Run `git pull` or `git fetch` to retrieve the current state of the repository. The easiest way to do this is to click 'Pull' in RStudio's Git pane.
+3. Switch to your new branch. The easiest way to do this is in the RStudio Git pane:
     - In the top right corner of the Git pane, you'll see the name of the current branch - most likely, `main`.
     - Click on the drop-down to see a list of branches.
     - Under `(REMOTE: ORIGIN)` you should see the branch you created. Click on your branch to switch to it. RStudio will show you the output of the Git command. Once you see output that looks like `Switched to new branch [your new branch name]`, you can close the Git output window.
-- Add, remove or edit code as needed to implement your change.
-- As you work, commit your changes to your branch:
+4. Add, remove or edit code as needed to implement your change.
+5. As you work, commit your changes to your branch:
     - Save the file(s) you're working on.
     - In the RStudio Git panel, click the checkbox next to any file that you want to include in the commit.
     - Click the 'Commit pending changes' button. Depending on your screen resolution and size of the your Git panel, the button may not be labelled. In RStudio 2024.12, the button looks like a checkbox with a tick.
     - Write a commit message to describe the change. The first line of the commit message should be a short description of the change. Ideally, use the imperative mood (as if you were telling the computer what to do), because this produces commit messages that are shorter and easier to read. For example, the commit message associated with adding this guide will be something like "Add contributor's guide".
-- It's typical to make a series of commits as you work on a new feature. Choosing appropriate chunks of work to commit is up to you, and is a skill you will develop with practice. A nice goal is to have your commits tell a sensible, sequential story about how you implemented your feature or fix, but don't get too hung up on this.
-- When you are ready to include your committed code in the `doestyle` package, use `git push` to push your branch back to the central Bitbucket Git repository. The easiest way to do this is with the 'Push' button in RStudio's Git pane.
+6. It's typical to make a series of commits as you work on a new feature. Choosing appropriate chunks of work to commit is up to you, and is a skill you will develop with practice. A nice goal is to have your commits tell a sensible, sequential story about how you implemented your feature or fix, but don't get too hung up on this.
+7. When you are ready to include your committed code in the `doestyle` package, use `git push` to push your branch back to the central Bitbucket Git repository. The easiest way to do this is with the 'Push' button in RStudio's Git pane.
 
 ### Open a Bitbucket pull request to merge your work into `doestyle`
 
 Every time you `git push` to the central `doestyle` repository on Bitbucket, Bitbucket runs a series of tests to make sure that the new code works and that the package can still be built. If the automated tests pass, you'll be able to request that your new code be merged into `doestyle` in a process called a 'pull request'.
 
-- In your browser, navigate to the [list of branches for nsw-education/doestyle](https://bitbucket.org/nsw-education/doestyle/branches/). You should see your branch in the list.
-- In the 'Pull request' column, click 'Create'.
-- Add details for your pull request. Bitbucket will automatically populate the source branch (ie. the branch you've been working on), the destination branch (main), title, description and reviewers, but you can update to clarify if needed.
-- Click the 'Create pull request' button to create the pull request and notify the reviewers.
-- A reviewer will either:
+1. In your browser, navigate to the [list of branches for nsw-education/doestyle](https://bitbucket.org/nsw-education/doestyle/branches/). You should see your branch in the list.
+2. In the 'Pull request' column, click 'Create'.
+3. Add details for your pull request. Bitbucket will automatically populate the source branch (ie. the branch you've been working on), the destination branch (main), title, description and reviewers, but you can update to clarify if needed.
+4. Click the 'Create pull request' button to create the pull request and notify the reviewers.
+5. A reviewer will either:
     - Approve the pull request, in which case your code will be merged into the `main` branch and become part of `doestyle`.
     - Start a conversation with you to request changes to your branch until it is ready to merge.
 
@@ -87,6 +91,10 @@ This section may be worth a quick read if you don't need a tutorial.
 We use a [feature branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) workflow. Any new feature, fix, documentation or other change should be made in a new branch. We use branch name prefixes to denote the type of work: `feature/`, `bugfix/`, `hotfix/` etc.
 
 Branches can be merged into `main` via pull request after they have passed automated testing and been approved by a reviewer. 
+
+### Versioning and releases
+
+We try to use [semantic versioning](https://semver.org/). In-development versions should have the same version number as the last release, with an [additional version suffix starting with 9](https://r-pkgs.org/lifecycle.html#sec-lifecycle-version-number-tidyverse) - e.g. 0.2.1.9000.
 
 ### Continuous integration and testing
 

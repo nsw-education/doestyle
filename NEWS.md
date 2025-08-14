@@ -1,12 +1,19 @@
+# doestyle (development version)
+
+* Added Contributors' Guide (Sam Gardiner)
+
 # doestyle 0.2.2
 
-* Include example dataset `public_schools`
-* Switch vignette renderer to knitr, to avoid package installation problems on some systems.
+* Include example dataset `public_schools` (Sam Gardiner)
+
+## Fixes
+
+* Switch vignette renderer to knitr, to avoid package installation problems on some systems (SamGardiner) 
 
 # doestyle 0.2.1
 
-* Pass arguments from `theme_doe()` to `ggplot2::theme()` via `...`
-* Added vignette "Extending `theme_doe()`" with examples
+* Pass arguments from `theme_doe()` to `ggplot2::theme()` via `...` (Matthew Finkbeiner)
+* Added vignette "Extending `theme_doe()`" with examples (Matthew Finkbeiner, Sam Gardiner)
 
 # doestyle 0.2.0
 
