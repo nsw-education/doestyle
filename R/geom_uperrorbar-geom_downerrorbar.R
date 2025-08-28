@@ -1,9 +1,9 @@
-#' Add either an up or down errorbar to a ggplot2 plot
+#' Add either an up errorbar to a ggplot2 plot
 #'
-#' Add either the upper or lower portion of an errorbar to a ggplot plot. This
+#' Add either the upper portion of an errorbar to a ggplot plot. This
 #' allows the halves of the errorbars to be different colours.
-#'
-#'#' @param ... Other parameters passed to [ggplot2::geom_errorbar()].
+#' @inheritParams ggplot2::geom_errorbar
+#' @param ... Other parameters passed to [ggplot2::geom_errorbar()].
 #'
 #' @export
 
@@ -62,6 +62,14 @@ GeomUperrorbar <- ggproto("GeomUperrorbar", Geom,
                           }
 )
 
+#' Add either a  down errorbar to a ggplot2 plot
+#'
+#' Add either the lower portion of an errorbar to a ggplot plot. This
+#' allows the halves of the errorbars to be different colours.
+#' @inheritParams ggplot2::geom_errorbar
+#' @param ... Other parameters passed to [ggplot2::geom_errorbar()].
+#'
+#' @export
 # Define a new geom for downward error bars
 geom_downerrorbar <- function(mapping = NULL, data = NULL,
                               stat = "identity", position = "identity",
