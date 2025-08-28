@@ -6,8 +6,10 @@ Authors@R: c(
           role = c("aut", "cre"),
           comment = c(ORCID = "0000-0002-6752-6969")),
     person("Matthew", "Finkbeiner", , "matthew.finkbeiner@det.nsw.edu.au",
-          role =  "aut")
-           )
+          role =  "aut"),
+    person("Jonathan", "McGuire", , "jonathan.mcguire1@det.nsw.edu.au",
+          role = "aut")
+    )
 Description: doestyle is an R package containing functions to help produce 
     brand-compliant figures for NSW Department of Education publications.
 License: MIT + file LICENSE

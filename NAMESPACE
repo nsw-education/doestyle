@@ -3,6 +3,8 @@
 export(check_font_families)
 export(doe_colours)
 export(doe_cols)
+export(geom_downerrorbar)
+export(geom_uperrorbar)
 export(get_colours)
 export(list_doestyle_colours)
 export(scale_colour_doe)
