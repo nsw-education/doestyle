@@ -1,6 +1,7 @@
 # doestyle (development version)
 
 * Added Contributors' Guide (Sam Gardiner)
+* New geoms: `geom_uperrorbar()` and `geom_downerrorbar()` (Jonathan McGuire)
 
 # doestyle 0.2.2
 
@@ -8,7 +9,7 @@
 
 ## Fixes
 
-* Switch vignette renderer to knitr, to avoid package installation problems on some systems (SamGardiner) 
+* Switch vignette renderer to knitr, to avoid package installation problems on some systems (Sam Gardiner) 
 
 # doestyle 0.2.1
 
