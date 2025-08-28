@@ -14,6 +14,7 @@ doestyle is an R package containing functions to help produce brand-compliant fi
 Authors:
 \itemize{
   \item Matthew Finkbeiner \email{matthew.finkbeiner@det.nsw.edu.au}
+  \item Jonathan McGuire \email{jonathan.mcguire1@det.nsw.edu.au}
 }
 
 }
