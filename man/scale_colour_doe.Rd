@@ -37,6 +37,27 @@ A scale function that can be added to a
 \description{
 Apply a DoE palette to the colour aesthetic
 }
+\examples{
+library(dplyr)
+library(ggplot2)
+library(doestyle)
+
+# Plot growth in primary and secondary schools over time
+public_schools |>
+ filter(Level_of_schooling \%in\% c("Primary School", "Secondary School")) |>
+ arrange(Date_1st_teacher) |>
+ mutate(
+   count = 1,
+   cumulative_schools = cumsum(count),
+   .by = Level_of_schooling) |>
+ ggplot(aes(x = Date_1st_teacher,
+            y = cumulative_schools,
+            colour = Level_of_schooling)) +
+ geom_step() +
+ # Add a default DoE colour scale
+ scale_colour_doe()
+
+}
 \seealso{
 \itemize{
 \item \link{doe_palettes} for the palettes available in \code{doestyle}.

@@ -21,6 +21,26 @@
 #'  - [palettes::scale_colour_palette_d()]
 #'  - [palettes::scale_colour_palette_c()]
 #'
+#' @examples
+#' library(dplyr)
+#' library(ggplot2)
+#' library(doestyle)
+#'
+#' # Plot growth in primary and secondary schools over time
+#' public_schools |>
+#'  filter(Level_of_schooling %in% c("Primary School", "Secondary School")) |>
+#'  arrange(Date_1st_teacher) |>
+#'  mutate(
+#'    count = 1,
+#'    cumulative_schools = cumsum(count),
+#'    .by = Level_of_schooling) |>
+#'  ggplot(aes(x = Date_1st_teacher,
+#'             y = cumulative_schools,
+#'             colour = Level_of_schooling)) +
+#'  geom_step() +
+#'  # Add a default DoE colour scale
+#'  scale_colour_doe()
+#'
 #' @export
 scale_colour_doe <- function(palette = doe_palettes$default,
                              discrete = TRUE,
