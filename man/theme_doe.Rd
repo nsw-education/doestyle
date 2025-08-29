@@ -18,3 +18,14 @@ font family, \href{https://github.com/uswds/public-sans}{Public Sans}.}
 Apply a minimalist DoE theme. By default, sets the font family to Public Sans
 and enables \code{\link[showtext:showtext_auto]{showtext::showtext_auto()}} to allow easy font display in plots.
 }
+\examples{
+library(doestyle)
+library(ggplot2)
+
+public_schools |>
+ ggplot(aes(y = Operational_directorate)) +
+ geom_bar() +
+ # Apply theme_doe(): minimal decoration and Public Sans typeface
+ theme_doe()
+
+}
