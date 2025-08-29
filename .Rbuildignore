@@ -6,3 +6,4 @@ bitbucket-pipelines.yml
 ^data-raw$
 ^vignettes/\.quarto$
 ^vignettes/*_files$
+^CONTRIBUTING\.md$

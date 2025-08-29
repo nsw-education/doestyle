@@ -8,6 +8,16 @@
 #'   font family, [Public Sans](https://github.com/uswds/public-sans).
 #' @param ... Other parameters passed to [ggplot2::theme()].
 #'
+#' @examples
+#' library(doestyle)
+#' library(ggplot2)
+#'
+#' public_schools |>
+#'  ggplot(aes(y = Operational_directorate)) +
+#'  geom_bar() +
+#'  # Apply theme_doe(): minimal decoration and Public Sans typeface
+#'  theme_doe()
+#'
 #' @export
 theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
 

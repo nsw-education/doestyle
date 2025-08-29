@@ -82,3 +82,23 @@ the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
 Add the lower portion of an errorbar to a ggplot plot. This
 allows the halves of the errorbars to be different colours.
 }
+\examples{
+library(doestyle)
+library(ggplot2)
+
+df <- data.frame(
+  observation = c("A", "B", "C"),
+  lower = c(1, 2, 3),
+  estimate = c(2, 4, 4),
+  upper = c(3, 6, 5)
+)
+
+ggplot(df, aes(x = observation,
+               y = estimate,
+               ymin = lower,
+               ymax = upper)) +
+  geom_col() +
+  geom_uperrorbar(width = 1/10) +
+  geom_downerrorbar(width = 1/10,
+                    colour = "white")
+}
