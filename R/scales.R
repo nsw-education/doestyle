@@ -66,6 +66,21 @@ scale_colour_doe <- function(palette = doe_palettes$default,
 #'  - [doe_palettes] for the palettes available in `doestyle`.
 #'  - [palettes::scale_fill_palette_d()]
 #'  - [palettes::scale_fill_palette_c()]
+#'
+#' @examples
+#' library(doestyle)
+#' library(dplyr)
+#' library(ggplot2)
+#'
+#' public_schools |>
+#'   filter(grepl("Connected Communities", Principal_network)) |>
+#'   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
+#'   geom_bar(colour = "black", position = position_dodge(preserve = "single")) +
+#'   theme(legend.position = "bottom") +
+#'   labs(y = "Schools") +
+#'   # Add a default department scale to the `fill` aesthetic.
+#'   scale_fill_doe()
+#'
 #' @export
 scale_fill_doe <- function(palette = doe_palettes$default,
                            discrete = TRUE,
