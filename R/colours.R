@@ -53,7 +53,7 @@ doe_cols <- get_colours
 #' list_doestyle_colours()
 #' list_doestyle_colours() |> print(n = 50)
 list_doestyle_colours <- function() {
-  colourdata |>
+  doestyle::colourdata |>
     dplyr::select(colour_name, hex_value) |>
     dplyr::mutate(hex_value = palettes::pal_colour(hex_value))
 }
