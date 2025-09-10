@@ -4,4 +4,5 @@
 ## usethis namespace: start
 #' @import ggplot2
 ## usethis namespace: end
-NULL
+
+utils::globalVariables(c(names(colourdata), "doe_palettes"))

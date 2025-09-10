@@ -27,7 +27,7 @@ show_colours <- function(swatches = c("brand", "primary", "nsw", "all")) {
     "nsw" = quote(nsw_brand),
     "all" = quote(TRUE),
     )
-  filterdata <- subset(colourdata, eval(filter_expr))
+  filterdata <- subset(doestyle::colourdata, eval(filter_expr))
 
   # Print the desired swatches
   filterdata |>
