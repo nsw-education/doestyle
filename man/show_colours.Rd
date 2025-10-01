@@ -4,7 +4,7 @@
 \alias{show_colours}
 \title{Show swatches for \code{doestyle} colours}
 \usage{
-show_colours(swatches = c("brand", "primary", "nsw", "all"))
+show_colours(swatches = c("brand", "primary", "nsw", "all"), linewidth = 1)
 }
 \arguments{
 \item{swatches}{The name of a set of colours to display. "\code{brand}" displays
@@ -13,10 +13,12 @@ primary brand colours only; "\code{nsw}" shows all NSW Government brand colours;
 and "\code{all}" shows every colour included in \code{doestyle}, including additional
 off-brand colours for UX element specified in the department's Brand
 guidelines document.}
+
+\item{linewidth}{The thickness of each swatch's coloured border.}
 }
 \value{
-\code{show_colours()} returns a \code{ggplot2} \code{gg} object, which
-can be further manipulated with user-specified themes etc.
+\code{show_colours()} returns a \code{ggplot2} \code{gg} object, which can be
+further manipulated with user-specified themes etc.
 }
 \description{
 \code{show_colours()} produces a plot that shows and names the colours available

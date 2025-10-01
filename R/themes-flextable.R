@@ -27,7 +27,7 @@ theme_doe_flextable <- function(x){
       odd_header = "transparent",
       odd_body = "transparent",
       even_header = "transparent",
-      even_body = get_colours("grey-5%")) |> # See Brand guidelines p.77
+      even_body = get_colours("off-white")) |> # See Brand guidelines p.77
     flextable::line_spacing(space = 1, part = "all") |>
     flextable::hline_top(part = "body",
                          border = officer::fp_border(

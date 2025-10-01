@@ -1,10 +1,6 @@
 #' Import showtext to make use of DoE fonts
 #'
-#' @importFrom showtext showtext_auto
-#' @importFrom glue glue_col
-#' @importFrom sysfonts font_paths font_families
 #' @export
-
 check_font_families <- function() {
   if (!suppressWarnings(any(file.exists(sysfonts::font_paths("Public Sans"))))) {
     glue::glue_col("The font {underline Public Sans} is not installed in any of the search paths.

@@ -5,7 +5,7 @@
 \alias{colourdata}
 \title{Colours provided by \code{doestyle}}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 50 rows and 11 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 51 rows and 13 columns.
 }
 \source{
 \itemize{

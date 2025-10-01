@@ -13,6 +13,10 @@ and tables for NSW Department of Education publications. It is under
 development, but already includes features that ease the use of brand
 colours and typesetting in `ggplot2` figures and `flextable` tables.
 
+If you’re interested in contributing to development, please [read the
+contributors’ guide](./CONTRIBUTING.md) and/or watch [contributing to
+`doestyle`](https://schoolsnsw.sharepoint.com/:v:/s/DataVisWorkingGroup/EYthJPlfW4ZOhP-6aT0JrMABgWWB2bX_sEOVSlPMwlZwWg?e=OxCP6i&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D).
+
 ## Installation
 
 `doestyle` is not yet on CRAN, but it can be easily installed directly
@@ -120,7 +124,7 @@ To list available colours by name, use `list_doestyle_colours()`:
 
 ``` r
 list_doestyle_colours()
-#> # A tibble: 50 × 2
+#> # A tibble: 51 × 2
 #>    colour_name hex_value
 #>    <chr>       <colour> 
 #>  1 grey-01     • #22272B
@@ -133,7 +137,7 @@ list_doestyle_colours()
 #>  8 green-04    • #DBFADF
 #>  9 teal-01     • #0B3F47
 #> 10 teal-02     • #2E808E
-#> # ℹ 40 more rows
+#> # ℹ 41 more rows
 ```
 
 More detailed information about each colour is available in the built-in
@@ -143,14 +147,15 @@ primary brand colours, auxiliary colours, or all NSW colours.
 ``` r
 colourdata |>
   filter(doe_primary)
-#> # A tibble: 4 × 11
-#>   colour_name hex_value family tone  nsw_brand doe_auxillary doe_brand
-#>   <chr>       <colour>  <chr>  <chr> <lgl>     <lgl>         <lgl>    
-#> 1 blue-01     • #002664 blue   01    TRUE      FALSE         TRUE     
-#> 2 blue-04     • #CBEDFD blue   04    TRUE      FALSE         TRUE     
-#> 3 red-02      • #D7153A red    02    TRUE      FALSE         TRUE     
-#> 4 white       • #FFFFFF white  <NA>  TRUE      FALSE         TRUE     
-#> # ℹ 4 more variables: doe_primary <lgl>, red <int>, green <int>, blue <int>
+#> # A tibble: 4 × 13
+#>   colour_name hex_value family   tone nsw_brand doe_auxillary doe_brand
+#>   <chr>       <colour>  <chr>   <int> <lgl>     <lgl>         <lgl>    
+#> 1 blue-01     • #002664 blue        1 TRUE      FALSE         TRUE     
+#> 2 blue-04     • #CBEDFD blue        4 TRUE      FALSE         TRUE     
+#> 3 red-02      • #D7153A red         2 TRUE      FALSE         TRUE     
+#> 4 white       • #FFFFFF neutral     2 TRUE      FALSE         TRUE     
+#> # ℹ 6 more variables: doe_primary <lgl>, secondary_colour <chr>,
+#> #   text_colour <chr>, red <int>, green <int>, blue <int>
 ```
 
 The available colours can also be visualised with `show_colours()`.
