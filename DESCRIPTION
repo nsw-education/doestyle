@@ -40,5 +40,5 @@ Depends:
     R (>= 4.1)
 LazyData: true
 VignetteBuilder: knitr
-URL: https://github.com/nsw-education/doestyle
+URL: https://nsw-education.github.io/doestyle/
 BugReports: https://github.com/nsw-education/doestyle/issues
