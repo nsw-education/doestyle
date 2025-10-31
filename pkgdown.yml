@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.1.3
+pkgdown_sha: ~
+articles:
+  extending_theme_doe: extending_theme_doe.html
+last_built: 2025-10-31T00:28Z
+urls:
+  reference: https://nsw-education.github.io/doestyle/reference
+  article: https://nsw-education.github.io/doestyle/articles
