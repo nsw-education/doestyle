@@ -62,21 +62,22 @@
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p><code>doestyle</code> is not yet on CRAN, but it can be easily installed directly from Bitbucket with the <code>remotes</code> package:</p>
+<p>Install the latest official release of <code>doestyle</code> with <code><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages()</a></code>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">'doestyle'</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'https://nsw-education.r-universe.dev'</span>, <span class="st">'https://cloud.r-project.org'</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>Alternatively, install the latest in-development version from GitHub with <code>remotes</code>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Install `remotes` if needed</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org" class="external-link">"remotes"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Install doestyle and its documentation using `remotes`</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_bitbucket</span><span class="op">(</span><span class="st">"nsw-education/doestyle"</span>, build_vignettes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>The same command can be used to update your installed version of <code>doestyle</code>.</p>
-<p>If you’re using RStudio on Windows and it prompts you to restart R before installing, it is safer to choose “No” - there is a <a href="https://github.com/rstudio/rstudio/issues/2656" class="external-link">known RStudio issue</a> around reinstalling packages on Windows.</p>
+<span><span class="co"># Install doestyle using `remotes`</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"nsw-education/doestyle"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage-examples">Usage examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
 </h2>
 <p>The following examples use data from the <a href="https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-master-dataset" class="external-link">Public Schools Master Dataset</a>, which is available as a package dataset named <code>public_schools</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://nsw-education.github.io/doestyle/">doestyle</a></span><span class="op">)</span></span>
 <span></span>
@@ -103,7 +104,7 @@
 </h3>
 <p><code>doestyle</code> provides the scale functions <code><a href="reference/scale_colour_doe.html">scale_colour_doe()</a></code> and <code><a href="reference/scale_fill_doe.html">scale_fill_doe()</a></code> to easily apply brand colours to the colour or fill aesthetics of a ggplot2 object.</p>
 <p>For a default colour scale, apply <code><a href="reference/scale_colour_doe.html">scale_colour_doe()</a></code> with no arguments:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">public_schools</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">Operational_directorate</span> <span class="op">==</span> <span class="st">"Metropolitan South and West"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">LBOTE_pct</span>, y <span class="op">=</span> <span class="va">FOEI_Value</span>, colour <span class="op">=</span> <span class="va">Intensive_english_centre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -114,7 +115,7 @@
 <span>  <span class="fu"><a href="reference/scale_colour_doe.html">scale_colour_doe</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="./reference/figures/README-fig-lbote-foei-iec-scatter-1.png" width="100%"></p>
 <p>An on-brand default fill scale can be applied with <code><a href="reference/scale_fill_doe.html">scale_fill_doe()</a></code>. Be aware that lighter colours, although part of the department’s official brand palette, may require a darker edge to meet <a href="https://brand.education.nsw.gov.au/content/edam/en/brand-guideline.html" class="external-link">our accessibility requirements for contrast</a>.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">public_schools</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu">str_detect</span><span class="op">(</span><span class="va">Principal_network</span>, <span class="st">"Connected Communities"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">Principal_network</span>, fill <span class="op">=</span> <span class="va">Level_of_schooling</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -132,7 +133,7 @@
 </h3>
 <p><code>doestyle</code> provides a mapping from the NSW Government named colour palette to hex values that can be used in almost any R function that handles colours. Every colour defined by the <a href="https://digitalnsw.github.io/nsw-design-system/core/colour/index.html" class="external-link">NSW Government Design System</a> is available, including the subset that makes up the Department of Education brand palette.</p>
 <p>To list available colours by name, use <code><a href="reference/list_doestyle_colours.html">list_doestyle_colours()</a></code>:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/list_doestyle_colours.html">list_doestyle_colours</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 51 × 2</span></span>
 <span><span class="co">#&gt;    colour_name hex_value</span></span>
@@ -149,7 +150,7 @@
 <span><span class="co">#&gt; 10 teal-02     • #2E808E</span></span>
 <span><span class="co">#&gt; # ℹ 41 more rows</span></span></code></pre></div>
 <p>More detailed information about each colour is available in the built-in dataset <code>colourdata</code>, which can be filtered for Department of Education primary brand colours, auxiliary colours, or all NSW colours.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">colourdata</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">doe_primary</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 4 × 13</span></span>
@@ -162,19 +163,19 @@
 <span><span class="co">#&gt; # ℹ 6 more variables: doe_primary &lt;lgl&gt;, secondary_colour &lt;chr&gt;,</span></span>
 <span><span class="co">#&gt; #   text_colour &lt;chr&gt;, red &lt;int&gt;, green &lt;int&gt;, blue &lt;int&gt;</span></span></code></pre></div>
 <p>The available colours can also be visualised with <code><a href="reference/show_colours.html">show_colours()</a></code>.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Show swatches for the department's brand colours:</span></span>
 <span><span class="fu"><a href="reference/show_colours.html">show_colours</a></span><span class="op">(</span><span class="st">"brand"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="./reference/figures/README-fig-show-colours-1.png" width="100%"></p>
 <p>To look up hex values, use <code><a href="reference/get_colours.html">doe_colours()</a></code>:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Return hex values for named NSW Government colours:</span></span>
 <span><span class="fu"><a href="reference/get_colours.html">doe_colours</a></span><span class="op">(</span><span class="st">"blue-01"</span>, <span class="st">"red-02"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[2]&gt;</span></span>
 <span><span class="co">#&gt; • #002664</span></span>
 <span><span class="co">#&gt; • #D7153A</span></span></code></pre></div>
 <p>These values can be used in base R plotting functions, if you are not a ggplot2 user:</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">public_schools</span><span class="op">$</span><span class="va">latest_year_enrolment_FTE</span>, col <span class="op">=</span> <span class="fu"><a href="reference/get_colours.html">doe_colours</a></span><span class="op">(</span><span class="st">"blue-01"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="./reference/figures/README-fig-base-hist-1.png" width="100%"></p>
 </div>
@@ -182,7 +183,7 @@
 <h3 id="theming">Theming<a class="anchor" aria-label="anchor" href="#theming"></a>
 </h3>
 <p><code>doestyle</code> currently contains one ggplot2 theme, <code><a href="reference/theme_doe.html">theme_doe()</a></code>. It uses minimal non-data ink, and sets the default font to Public Sans, the department’s primary brand font face. The theme is not currently very attractive - but you can help make it better by contributing to <code>doestyle</code>!</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">public_schools</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">group_by</span><span class="op">(</span>year <span class="op">=</span> <span class="fu">year</span><span class="op">(</span><span class="va">Date_1st_teacher</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">count</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -197,7 +198,7 @@
 <h3 id="palettes">Palettes<a class="anchor" aria-label="anchor" href="#palettes"></a>
 </h3>
 <p>Several palettes are provided by <code>doestyle</code> in a list of lists called <code>doe_palettes</code>. If used with no <code>palette</code> argument, <code><a href="reference/scale_colour_doe.html">scale_colour_doe()</a></code> and <code><a href="reference/scale_fill_doe.html">scale_fill_doe()</a></code> default to the values provided in <code>doe_palettes$default</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">doe_palettes</span><span class="op">$</span><span class="va">default</span></span>
 <span><span class="co">#&gt; &lt;palettes_colour[12]&gt;</span></span>
 <span><span class="co">#&gt; • #002664</span></span>
@@ -214,7 +215,7 @@
 <span><span class="co">#&gt; • #EBEBEB</span></span></code></pre></div>
 <p>See <code><a href="reference/doe_palettes.html">help(doe_palettes)</a></code> for more information on the built-in palettes.</p>
 <p>Custom palettes are easy to create with the assistance of <code><a href="https://mccarthy-m-g.github.io/palettes/reference/pal_colour.html" class="external-link">pal_colour()</a></code> from the <a href="https://mccarthy-m-g.github.io/palettes/" class="external-link"><code>palettes</code></a> package.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load `palettes`</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://mccarthy-m-g.github.io/palettes/" class="external-link">palettes</a></span><span class="op">)</span></span>
 <span></span>
