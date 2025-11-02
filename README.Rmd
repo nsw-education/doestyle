@@ -30,19 +30,21 @@ If you're interested in contributing to development, please [read the contributo
 
 ## Installation
 
-`doestyle` is not yet on CRAN, but it can be easily installed directly from Bitbucket with the `remotes` package:
+Install the latest official release of `doestyle` with `install.packages()`:
 
-```{r eval=FALSE}
+```r
+install.packages('doestyle', repos = c('https://nsw-education.r-universe.dev', 'https://cloud.r-project.org'))
+```
+
+Alternatively, install the latest in-development version from GitHub with `remotes`:
+
+``` r
 # Install `remotes` if needed
 if (!require("remotes")) install.packages("remotes")
 
-# Install doestyle and its documentation using `remotes`
-remotes::install_bitbucket("nsw-education/doestyle", build_vignettes = TRUE)
+# Install doestyle using `remotes`
+remotes::install_github("nsw-education/doestyle")
 ```
-
-The same command can be used to update your installed version of `doestyle`.
-
-If you're using RStudio on Windows and it prompts you to restart R before installing, it is safer to choose "No" - there is a [known RStudio issue](https://github.com/rstudio/rstudio/issues/2656) around reinstalling packages on Windows.
 
 ## Usage examples
 
