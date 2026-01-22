@@ -1,0 +1,61 @@
+# Compute the contrast ratio between pairs of colours
+
+Compute contrast ratios between pairs of colours, using the WCAG 2.1
+formula.
+
+## Usage
+
+``` r
+contrast_ratio(colour1, colour2)
+```
+
+## Arguments
+
+- colour1, colour2:
+
+  Character vectors of hexadecimal colour values.
+
+## Value
+
+`contrast_ratio()` returns a numeric vector of contrast ratios, of the
+same length as `colour1` and `colour2`.
+
+## Details
+
+Contrast ratio is
+[defined](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) as
+\\\frac{L_1 + 0.05}{L_2 + 0.05}\\ where \\L_1\\ and \\L_2\\ are the
+[relative
+luminances](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance) of the
+lighter and darker colours being compared.
+
+Contrast ratios range from 1 (no colour contrast) to 21 (maximum
+contrast). To meet [WCAG 2.1 *minimum* (AA) criteria for
+accessibility](https://www.w3.org/TR/WCAG21/#contrast-minimum), the
+contrast ratios between adjacent colours must be:
+
+- For text, at least 4.5
+
+- For large text (18pt or larger, or 14pt bold), at least 3
+
+- For non-text plot elements (e.g. patterns, lines, points, borders
+  etc.), at least 3
+
+To meet WCAG 2.1 enhanced (AAA) contrast requirements, generally a ratio
+above 7 is required.
+
+See WCAG 2.1 success criteria [1.4.3 Contrast
+(Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum), [1.4.6
+Contrast (Enhanced)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
+and [1.4.11 Non-text
+Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast).
+
+## Examples
+
+``` r
+backgrounds <- doe_cols("white", "black", "blue-01", "grey-04", "black")
+foregrounds <- doe_cols("black", "white", "blue-03", "grey-03", "black")
+
+contrast_ratio(colour1 = backgrounds, colour2 = foregrounds)
+#> [1] 21.000000 21.000000  9.732217  1.268706  1.000000
+```

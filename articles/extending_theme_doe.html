@@ -81,8 +81,8 @@ Finkbeiner</h4>
 <div class="section level2">
 <h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
-<p><code>doestyle</code> includes an example dataset:
-<code>public_schools</code>, the NSW Public Schools Master dataset.</p>
+<p><code>doestyle</code> includes an example dataset: [public_schools],
+the NSW Public Schools Master dataset.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">public_schools</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 45</span></span></span>
@@ -108,182 +108,10 @@ Finkbeiner</h4>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html" class="external-link">str_detect</a></span><span class="op">(</span><span class="va">Principal_network</span>, <span class="st">"Connected Communities"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Principal_network</span>, fill <span class="op">=</span> <span class="va">Level_of_schooling</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"black"</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html" class="external-link">position_dodge</a></span><span class="op">(</span>preserve <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="../reference/theme_doe.html">theme_doe</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_doe.html">theme_doe</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Schools"</span>, x <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="../reference/scale_fill_doe.html">scale_fill_doe</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family</span></span>
-<span><span class="co">#&gt; 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span></code></pre></div>
-<p><img src="extending_theme_doe_files/figure-html/typical-use-1.png" width="700"></p>
+<span>  <span class="fu"><a href="../reference/scale_fill_doe.html">scale_fill_doe</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="extending_theme_doe_files/figure-html/typical-use-1.png" class="r-plt" alt="" width="700"></p>
 <p>Modify angle and colour of axis text, and orientation of legend, by
 adding arguments to the call to <code><a href="../reference/theme_doe.html">theme_doe()</a></code>. See
 <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">ggplot2::theme()</a></code> for a complete list of arguments that can
@@ -293,7 +121,8 @@ be passed to <code><a href="../reference/theme_doe.html">theme_doe()</a></code>.
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html" class="external-link">str_detect</a></span><span class="op">(</span><span class="va">Principal_network</span>, <span class="st">"Connected Communities"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Principal_network</span>, fill <span class="op">=</span> <span class="va">Level_of_schooling</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>colour <span class="op">=</span> <span class="st">"black"</span>, position <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html" class="external-link">position_dodge</a></span><span class="op">(</span>preserve <span class="op">=</span> <span class="st">"single"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="../reference/theme_doe.html">theme_doe</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">'blue'</span>, </span>
+<span>  <span class="fu"><a href="../reference/theme_doe.html">theme_doe</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span>,</span>
+<span>            axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">'blue'</span>, </span>
 <span>                                       angle <span class="op">=</span> <span class="fl">15</span>, <span class="co"># add angle to x-axis labels</span></span>
 <span>                                       hjust <span class="op">=</span> <span class="fl">0.75</span>,</span>
 <span>                                       vjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, </span>
@@ -301,100 +130,8 @@ be passed to <code><a href="../reference/theme_doe.html">theme_doe()</a></code>.
 <span>                                        angle <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>, <span class="co"># rotate y-axis title</span></span>
 <span>            legend.direction <span class="op">=</span> <span class="st">"vertical"</span><span class="op">)</span> <span class="op">+</span> <span class="co"># stack legend text vertically</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"Schools"</span>, x <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="../reference/scale_fill_doe.html">scale_fill_doe</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font</span></span>
-<span><span class="co">#&gt; family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span>
-<span><span class="co">#&gt; Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :</span></span>
-<span><span class="co">#&gt; font family 'Public Sans' not found, will use 'sans' instead</span></span></code></pre></div>
-<p><img src="extending_theme_doe_files/figure-html/extending-theme-doe-1.png" width="700"></p>
+<span>  <span class="fu"><a href="../reference/scale_fill_doe.html">scale_fill_doe</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p><img src="extending_theme_doe_files/figure-html/extending-theme-doe-1.png" class="r-plt" alt="" width="700"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
@@ -407,7 +144,7 @@ be passed to <code><a href="../reference/theme_doe.html">theme_doe()</a></code>.
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
