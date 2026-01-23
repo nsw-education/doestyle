@@ -13,7 +13,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/nsw-education/doestyle/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/nsw-education/doestyle/blob/v0.3.0/DESCRIPTION)
 
 Gardiner S, Finkbeiner M, McGuire J (2026). *doestyle: NSW Department of
 Education branding for figures and tables*. R package version 0.3.0,
