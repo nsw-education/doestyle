@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">doestyle</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.2.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,28 +37,42 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="doestyle-development-version">doestyle (development version)<a class="anchor" aria-label="anchor" href="#doestyle-development-version"></a></h2>
-<ul><li>Added Contributors’ Guide (Sam Gardiner)</li>
-<li>New geoms: <code><a href="../reference/geom_uperrorbar.html">geom_uperrorbar()</a></code> and <code><a href="../reference/geom_downerrorbar.html">geom_downerrorbar()</a></code> (Jonathan McGuire)</li>
-<li>New functions for generating secondary palettes for patterns and text: <code>get_secondary_colours()</code> and <code>get_text_colours()</code>. Secondary and text colours have been chosen to meet minimum accessibility standards for contrast. (Sam Gardiner)</li>
-<li>New functions for computing relative luminance and contrast ratio: <code><a href="../reference/relative_luminance.html">relative_luminance()</a></code> and <code><a href="../reference/contrast_ratio.html">contrast_ratio()</a></code>. These functions can be used to check that colour combinations meet accessibility standards.</li>
+<h2 class="pkg-version" data-toc-text="0.3.0" id="doestyle-030">doestyle 0.3.0<a class="anchor" aria-label="anchor" href="#doestyle-030"></a></h2>
+<div class="section level3">
+<h3 id="added-0-3-0">Added<a class="anchor" aria-label="anchor" href="#added-0-3-0"></a></h3>
+<ul><li>Added Contributors’ Guide (3)</li>
+<li>New geoms: <code><a href="../reference/geom_uperrorbar.html">geom_uperrorbar()</a></code> and <code><a href="../reference/geom_downerrorbar.html">geom_downerrorbar()</a></code> (<a href="https://github.com/JonathanMcGuire" class="external-link">@JonathanMcGuire</a>)</li>
+<li>New functions for generating secondary palettes for patterns and text: <code>get_secondary_colours()</code> and <code>get_text_colours()</code>. Secondary and text colours have been chosen to meet minimum accessibility standards for contrast.
+<ol class="example" style="list-style-type: decimal"><li>
+</li></ol></li>
+<li>New functions for computing relative luminance and contrast ratio: <code><a href="../reference/relative_luminance.html">relative_luminance()</a></code> and <code><a href="../reference/contrast_ratio.html">contrast_ratio()</a></code>. These functions can be used to check that colour combinations meet accessibility standards. (3)</li>
 </ul></div>
+<div class="section level3">
+<h3 id="fixes-0-3-0">Fixes<a class="anchor" aria-label="anchor" href="#fixes-0-3-0"></a></h3>
+<ul><li>
+<code><a href="../reference/check_font_families.html">check_font_families()</a></code> now correctly checks for the presence of Public Sans before loading it (<a href="https://github.com/nsw-education/doestyle/issues/32" class="external-link">#32</a>, 3)</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.2" id="doestyle-022">doestyle 0.2.2<a class="anchor" aria-label="anchor" href="#doestyle-022"></a></h2>
-<ul><li>Include example dataset <code>public_schools</code> (Sam Gardiner)</li>
+<ul><li>Include example dataset <code>public_schools</code> (3)</li>
 </ul><div class="section level3">
 <h3 id="fixes-0-2-2">Fixes<a class="anchor" aria-label="anchor" href="#fixes-0-2-2"></a></h3>
-<ul><li>Switch vignette renderer to knitr, to avoid package installation problems on some systems (Sam Gardiner)</li>
+<ul><li>Switch vignette renderer to knitr, to avoid package installation problems on some systems (3)</li>
 </ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.1" id="doestyle-021">doestyle 0.2.1<a class="anchor" aria-label="anchor" href="#doestyle-021"></a></h2>
-<ul><li>Pass arguments from <code><a href="../reference/theme_doe.html">theme_doe()</a></code> to <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">ggplot2::theme()</a></code> via <code>...</code> (Matthew Finkbeiner)</li>
-<li>Added vignette “Extending <code><a href="../reference/theme_doe.html">theme_doe()</a></code>” with examples (Matthew Finkbeiner, Sam Gardiner)</li>
+<ul><li>Pass arguments from <code><a href="../reference/theme_doe.html">theme_doe()</a></code> to <code><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">ggplot2::theme()</a></code> via <code>...</code>
+<ol start="2" class="example" style="list-style-type: decimal"><li>
+</li></ol></li>
+<li>Added vignette “Extending <code><a href="../reference/theme_doe.html">theme_doe()</a></code>” with examples (2,
+<ol start="3" class="example" style="list-style-type: decimal"><li>
+</li></ol></li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.2.0" id="doestyle-020">doestyle 0.2.0<a class="anchor" aria-label="anchor" href="#doestyle-020"></a></h2>
-<ul><li>Added optional arguments to <code><a href="../reference/theme_doe.html">theme_doe()</a></code> to allow specification of fonts other than Public Sans and base size other than 16 points (Matthew Finkbeiner).</li>
+<ul><li>Added optional arguments to <code><a href="../reference/theme_doe.html">theme_doe()</a></code> to allow specification of fonts other than Public Sans and base size other than 16 points (2).</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.0" id="doestyle-010">doestyle 0.1.0<a class="anchor" aria-label="anchor" href="#doestyle-010"></a></h2>
