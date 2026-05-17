@@ -11,3 +11,5 @@ bitbucket-pipelines.yml
 ^docs$
 ^pkgdown$
 ^\.github$
+^\.positai$
+^\.claude$

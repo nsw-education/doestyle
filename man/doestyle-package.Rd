@@ -25,5 +25,13 @@ Authors:
   \item Jonathan McGuire
 }
 
+Other contributors:
+\itemize{
+  \item United States Web Design System (Author of included Public Sans font face) [copyright holder]
+  \item Dan Williams (Author of included Public Sans font face) [copyright holder]
+  \item Pablo Impallari (Author of included Public Sans font face) [copyright holder]
+  \item Rodrigo Fuenzalida (Author of included Public Sans font face) [copyright holder]
+}
+
 }
 \keyword{internal}

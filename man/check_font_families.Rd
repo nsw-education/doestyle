@@ -13,7 +13,9 @@ for its side effects.
 \description{
 \code{\link[=theme_doe]{theme_doe()}} uses \code{showtext} to allow R graphics devices to render the
 Public Sans font family. Use \code{check_font_families()} to check that Public
-Sans is available and to activate \code{showtext}.
+Sans is available and to activate \code{showtext}. If Public Sans is not installed
+on the system or user font search paths, \code{doestyle}'s embedded copy of the
+files will be used.
 }
 \seealso{
 \code{\link[showtext:showtext_auto]{showtext::showtext_auto()}} and \href{https://digitalnsw.github.io/public-sans/}{Public Sans}.

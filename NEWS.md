@@ -1,3 +1,7 @@
+# doestyle (development version)
+
+* Include a copy of the Public Sans font family (@gardiners)
+
 # doestyle 0.3.0
 
 ## Added
