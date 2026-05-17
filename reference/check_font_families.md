@@ -3,7 +3,9 @@
 [`theme_doe()`](https://nsw-education.github.io/doestyle/reference/theme_doe.md)
 uses `showtext` to allow R graphics devices to render the Public Sans
 font family. Use `check_font_families()` to check that Public Sans is
-available and to activate `showtext`.
+available and to activate `showtext`. If Public Sans is not installed on
+the system or user font search paths, `doestyle`'s embedded copy of the
+files will be used.
 
 ## Usage
 

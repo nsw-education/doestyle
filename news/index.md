@@ -1,10 +1,14 @@
 # Changelog
 
+## doestyle (development version)
+
+- Include a copy of the Public Sans font family (1)
+
 ## doestyle 0.3.0
 
 ### Added
 
-- Added Contributors’ Guide (3)
+- Added Contributors’ Guide (1)
 - New geoms:
   [`geom_uperrorbar()`](https://nsw-education.github.io/doestyle/reference/geom_uperrorbar.md)
   and
@@ -20,22 +24,22 @@
   and
   [`contrast_ratio()`](https://nsw-education.github.io/doestyle/reference/contrast_ratio.md).
   These functions can be used to check that colour combinations meet
-  accessibility standards. (3)
+  accessibility standards. (1)
 
 ### Fixes
 
 - [`check_font_families()`](https://nsw-education.github.io/doestyle/reference/check_font_families.md)
   now correctly checks for the presence of Public Sans before loading it
-  ([\#32](https://github.com/nsw-education/doestyle/issues/32), 3)
+  ([\#32](https://github.com/nsw-education/doestyle/issues/32), 1)
 
 ## doestyle 0.2.2
 
-- Include example dataset `public_schools` (3)
+- Include example dataset `public_schools` (1)
 
 ### Fixes
 
 - Switch vignette renderer to knitr, to avoid package installation
-  problems on some systems (3)
+  problems on some systems (1)
 
 ## doestyle 0.2.1
 
@@ -48,7 +52,7 @@
 - Added vignette “Extending
   [`theme_doe()`](https://nsw-education.github.io/doestyle/reference/theme_doe.md)”
   with examples (2,
-  3.  
+  1.  
 
 ## doestyle 0.2.0
 

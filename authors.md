@@ -10,19 +10,31 @@
 
 - **Jonathan McGuire**. Author.
 
+- **United States Web Design System**. Copyright holder.  
+  Author of included Public Sans font face
+
+- **Dan Williams**. Copyright holder.  
+  Author of included Public Sans font face
+
+- **Pablo Impallari**. Copyright holder.  
+  Author of included Public Sans font face
+
+- **Rodrigo Fuenzalida**. Copyright holder.  
+  Author of included Public Sans font face
+
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/nsw-education/doestyle/blob/v0.3.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/nsw-education/doestyle/blob/main/DESCRIPTION)
 
 Gardiner S, Finkbeiner M, McGuire J (2026). *doestyle: NSW Department of
-Education branding for figures and tables*. R package version 0.3.0,
-<https://nsw-education.github.io/doestyle/>.
+Education branding for figures and tables*. R package version
+0.3.0.9000, <https://nsw-education.github.io/doestyle/>.
 
     @Manual{,
       title = {doestyle: NSW Department of Education branding for figures and tables},
       author = {Samuel Gardiner and Matthew Finkbeiner and Jonathan McGuire},
       year = {2026},
-      note = {R package version 0.3.0},
+      note = {R package version 0.3.0.9000},
       url = {https://nsw-education.github.io/doestyle/},
     }

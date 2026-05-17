@@ -21,3 +21,17 @@ Authors:
 - Matthew Finkbeiner ([ORCID](https://orcid.org/0000-0003-0373-8150))
 
 - Jonathan McGuire
+
+Other contributors:
+
+- United States Web Design System (Author of included Public Sans font
+  face) \[copyright holder\]
+
+- Dan Williams (Author of included Public Sans font face) \[copyright
+  holder\]
+
+- Pablo Impallari (Author of included Public Sans font face) \[copyright
+  holder\]
+
+- Rodrigo Fuenzalida (Author of included Public Sans font face)
+  \[copyright holder\]

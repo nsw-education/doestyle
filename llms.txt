@@ -18,6 +18,7 @@ Install the latest official release of `doestyle` with
 [`install.packages()`](https://rdrr.io/r/utils/install.packages.html):
 
 ``` r
+
 install.packages('doestyle', repos = c('https://nsw-education.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
@@ -25,6 +26,7 @@ Alternatively, install the latest in-development version from GitHub
 with `remotes`:
 
 ``` r
+
 # Install `remotes` if needed
 if (!require("remotes")) install.packages("remotes")
 
@@ -39,6 +41,7 @@ Dataset](https://data.nsw.gov.au/data/dataset/nsw-education-nsw-public-schools-m
 which is available as a package dataset named `public_schools`.
 
 ``` r
+
 library(tidyverse)
 library(doestyle)
 
@@ -76,6 +79,7 @@ For a default colour scale, apply
 with no arguments:
 
 ``` r
+
 public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
   ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
@@ -96,6 +100,7 @@ accessibility requirements for
 contrast](https://brand.education.nsw.gov.au/content/edam/en/brand-guideline.html).
 
 ``` r
+
 public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
@@ -123,6 +128,7 @@ To list available colours by name, use
 [`list_doestyle_colours()`](https://nsw-education.github.io/doestyle/reference/list_doestyle_colours.md):
 
 ``` r
+
 list_doestyle_colours()
 #> # A tibble: 51 × 2
 #>    colour_name hex_value
@@ -145,6 +151,7 @@ dataset `colourdata`, which can be filtered for Department of Education
 primary brand colours, auxiliary colours, or all NSW colours.
 
 ``` r
+
 colourdata |>
   filter(doe_primary)
 #> # A tibble: 4 × 13
@@ -162,6 +169,7 @@ The available colours can also be visualised with
 [`show_colours()`](https://nsw-education.github.io/doestyle/reference/show_colours.md).
 
 ``` r
+
 # Show swatches for the department's brand colours:
 show_colours("brand")
 ```
@@ -172,6 +180,7 @@ To look up hex values, use
 [`doe_colours()`](https://nsw-education.github.io/doestyle/reference/get_colours.md):
 
 ``` r
+
 # Return hex values for named NSW Government colours:
 doe_colours("blue-01", "red-02")
 #> <palettes_colour[2]>
@@ -183,6 +192,7 @@ These values can be used in base R plotting functions, if you are not a
 ggplot2 user:
 
 ``` r
+
 hist(public_schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
 ```
 
@@ -198,6 +208,7 @@ very attractive - but you can help make it better by contributing to
 `doestyle`!
 
 ``` r
+
 public_schools |>
   group_by(year = year(Date_1st_teacher)) |>
   count() |>
@@ -220,6 +231,7 @@ and
 default to the values provided in `doe_palettes$default`:
 
 ``` r
+
 doe_palettes$default
 #> <palettes_colour[12]>
 #> • #002664
@@ -245,6 +257,7 @@ Custom palettes are easy to create with the assistance of
 from the [`palettes`](https://mccarthy-m-g.github.io/palettes/) package.
 
 ``` r
+
 # Load `palettes`
 library(palettes)
 

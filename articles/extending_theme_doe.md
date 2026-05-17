@@ -6,6 +6,7 @@ This vignette provides examples of customising plot output using
 ## Setup
 
 ``` r
+
 library(doestyle)
 library(dplyr)
 library(ggplot2)
@@ -18,6 +19,7 @@ library(stringr)
 Public Schools Master dataset.
 
 ``` r
+
 head(public_schools)
 #> # A tibble: 6 × 45
 #>   School_code AgeID School_name   Street Town_suburb Postcode Phone School_Email
@@ -43,6 +45,7 @@ and
 [`scale_fill_doe()`](https://nsw-education.github.io/doestyle/reference/scale_fill_doe.md):
 
 ``` r
+
 public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
@@ -63,6 +66,7 @@ for a complete list of arguments that can be passed to
 [`theme_doe()`](https://nsw-education.github.io/doestyle/reference/theme_doe.md).
 
 ``` r
+
 public_schools |>
   filter(str_detect(Principal_network, "Connected Communities")) |>
   ggplot(aes(x = Principal_network, fill = Level_of_schooling)) +
