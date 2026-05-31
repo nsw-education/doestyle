@@ -1,4 +1,4 @@
-# doestyle (development version)
+# doestyle 0.4.0
 
 * Include a copy of the Public Sans font family (@gardiners)
 * `get_colours()` now preserves the names of its arguments, making it easier to
