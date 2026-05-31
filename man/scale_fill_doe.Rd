@@ -55,7 +55,7 @@ public_schools |>
 \seealso{
 \itemize{
 \item \link{doe_palettes} for the palettes available in \code{doestyle}.
-\item \code{\link[palettes:scale_colour_palette_d]{palettes::scale_fill_palette_d()}}
-\item \code{\link[palettes:scale_colour_palette_d]{palettes::scale_fill_palette_c()}}
+\item \code{\link[palettes:scale_fill_palette_d]{palettes::scale_fill_palette_d()}}
+\item \code{\link[palettes:scale_fill_palette_c]{palettes::scale_fill_palette_c()}}
 }
 }

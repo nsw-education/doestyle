@@ -32,7 +32,6 @@ Imports:
     sysfonts
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Suggests: 
     fs,
     knitr,
@@ -49,3 +48,4 @@ LazyData: true
 VignetteBuilder: knitr
 URL: https://nsw-education.github.io/doestyle/
 BugReports: https://github.com/nsw-education/doestyle/issues
+Config/roxygen2/version: 8.0.0

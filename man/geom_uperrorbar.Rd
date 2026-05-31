@@ -62,7 +62,7 @@ to use \code{position_jitter()}, give the position as \code{"jitter"}.
 \link[ggplot2:layer_positions]{layer position} documentation.
 }}
 
-\item{...}{Other parameters passed to \code{\link[ggplot2:geom_linerange]{ggplot2::geom_errorbar()}}.}
+\item{...}{Other parameters passed to \code{\link[ggplot2:geom_errorbar]{ggplot2::geom_errorbar()}}.}
 
 \item{na.rm}{If \code{FALSE}, the default, missing values are removed with
 a warning. If \code{TRUE}, missing values are silently removed.}

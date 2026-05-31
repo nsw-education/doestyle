@@ -21,6 +21,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Samuel Gardiner \email{samuel.gardiner7@det.nsw.edu.au} (\href{https://orcid.org/0000-0002-6752-6969}{ORCID})
   \item Matthew Finkbeiner (\href{https://orcid.org/0000-0003-0373-8150}{ORCID})
   \item Jonathan McGuire
 }
