@@ -64,10 +64,10 @@ head(public_schools)
 
 For a default colour scale, apply `scale_colour_doe()` with no arguments:
 
-```{r fig-lbote-foei-iec-scatter}
+```{r fig-lbote-icsea-iec-scatter}
 public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
-  ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
+  ggplot(aes(x = LBOTE_pct, y = ICSEA_value, colour = Intensive_english_centre)) +
   geom_point() +
   # Add a default department scale to the `colour` aesthetic. Note that `colour`
   # has already been mapped onto the value of `Intensive_english_centre` in this

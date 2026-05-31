@@ -33,7 +33,6 @@ colourdata <- read_csv("data-raw/colourdata.csv",
                          green = col_integer(),
                          blue = col_integer()
                        )) |>
-  mutate(hex_value = set_names(palettes::pal_color(hex_value),
-                               colour_name))
+  mutate(hex_value = palettes::pal_color(hex_value))
 
 usethis::use_data(colourdata, overwrite = TRUE)

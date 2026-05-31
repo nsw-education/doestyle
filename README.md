@@ -80,7 +80,7 @@ arguments:
 ``` r
 public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
-  ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
+  ggplot(aes(x = LBOTE_pct, y = ICSEA_value, colour = Intensive_english_centre)) +
   geom_point() +
   # Add a default department scale to the `colour` aesthetic. Note that `colour`
   # has already been mapped onto the value of `Intensive_english_centre` in this
@@ -88,7 +88,7 @@ public_schools |>
   scale_colour_doe()
 ```
 
-<img src="./man/figures/README-fig-lbote-foei-iec-scatter-1.png" width="100%" />
+<img src="./man/figures/README-fig-lbote-icsea-iec-scatter-1.png" alt="" width="100%" />
 
 An on-brand default fill scale can be applied with `scale_fill_doe()`.
 Be aware that lighter colours, although part of the department’s
@@ -109,7 +109,7 @@ public_schools |>
   scale_fill_doe()
 ```
 
-<img src="./man/figures/README-fig-connected-communities-1.png" width="100%" />
+<img src="./man/figures/README-fig-connected-communities-1.png" alt="" width="100%" />
 
 ### Colours
 
@@ -165,7 +165,7 @@ The available colours can also be visualised with `show_colours()`.
 show_colours("brand")
 ```
 
-<img src="./man/figures/README-fig-show-colours-1.png" width="100%" />
+<img src="./man/figures/README-fig-show-colours-1.png" alt="" width="100%" />
 
 To look up hex values, use `doe_colours()`:
 
@@ -184,7 +184,7 @@ ggplot2 user:
 hist(public_schools$latest_year_enrolment_FTE, col = doe_colours("blue-01"))
 ```
 
-<img src="./man/figures/README-fig-base-hist-1.png" width="100%" />
+<img src="./man/figures/README-fig-base-hist-1.png" alt="" width="100%" />
 
 ### Theming
 
@@ -205,7 +205,7 @@ public_schools |>
   theme_doe()
 ```
 
-<img src="./man/figures/README-fig-theme-doe-1.png" width="100%" />
+<img src="./man/figures/README-fig-theme-doe-1.png" alt="" width="100%" />
 
 ### Palettes
 
@@ -257,4 +257,4 @@ public_schools |>
   scale_colour_doe(my_custom_doe_palette)
 ```
 
-<img src="./man/figures/README-fig-custom-palette-1.png" width="100%" />
+<img src="./man/figures/README-fig-custom-palette-1.png" alt="" width="100%" />

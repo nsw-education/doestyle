@@ -18,7 +18,8 @@ individual arguments.}
 }
 \value{
 \code{get_colours()} returns a character vector containing the hex values
-for each requested brand colour.
+for each requested brand colour. If the input contained named arguments,
+their names will be used for the outputs.
 }
 \description{
 Get brand colours by name

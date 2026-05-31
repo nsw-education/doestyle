@@ -15,7 +15,8 @@ doestyle_cols <- function() {
 #'   individual arguments.
 #'
 #' @return `get_colours()` returns a character vector containing the hex values
-#'   for each requested brand colour.
+#'   for each requested brand colour. If the input contained named arguments,
+#'   their names will be used for the outputs.
 #' @export
 #'
 #' @details `get_colours()` will only return hex values for valid NSW and
@@ -27,13 +28,23 @@ doestyle_cols <- function() {
 #' get_colours(c("red-01", "red-02", "red-03", "red-04"))
 get_colours <- function(...) {
   colour_names <- c(...)
+  # If the user passed named arguments, we want to preserve them
+  dot_names <- names(colour_names)
+
   if (is.null(colour_names)) {
     cli::cli_abort(c(
       "x" = "At least one colour name must be supplied to {.code get_colours()}"))
   }
 
+  if (any(dot_names == "")) {
+    cli::cli_warn(c(
+      "!" = "If providing any named arguments to {.code get_colours()}, all
+      arguments should be named."
+    ))
+  }
+
   check_colour_names(colour_names)
-  doestyle_cols()[colour_names]
+  purrr::set_names(doestyle_cols()[colour_names], dot_names)
 }
 
 #  Aliases for get_colours

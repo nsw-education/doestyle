@@ -1,6 +1,6 @@
 Package: doestyle
 Title: NSW Department of Education branding for figures and tables
-Version: 0.3.0.9000
+Version: 0.4.0
 Authors@R: c(
     person("Samuel", "Gardiner", email = "samuel.gardiner7@det.nsw.edu.au",
         role = c("aut", "cre"),
@@ -32,7 +32,6 @@ Imports:
     sysfonts
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
 Suggests: 
     fs,
     knitr,
@@ -49,3 +48,4 @@ LazyData: true
 VignetteBuilder: knitr
 URL: https://nsw-education.github.io/doestyle/
 BugReports: https://github.com/nsw-education/doestyle/issues
+Config/roxygen2/version: 8.0.0

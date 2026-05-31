@@ -41,6 +41,18 @@ theme_doe <- function(base_size = 16, base_family = "Public Sans", ...){
       legend.position = "bottom",
       legend.text = element_text(size = rel(0.7)),
       legend.title = element_text(size = rel(0.7)),
+
+      # Default colours
+      geom = element_geom(
+        colour = doe_colours("blue-01"),
+        fill = doe_colours("blue-03")
+      ),
+
+      # Default palettes
+      palette.colour.discrete = as.character(doe_palettes$default),
+      palette.colour.continuous = as.character(doe_colours("blue-01", "blue-04")),
+      palette.fill.discrete = as.character(doe_palettes$default),
+      palette.fill.continuous = as.character(doe_colours("blue-01", "blue-04")),
       ...
     )
 }
