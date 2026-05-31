@@ -1,6 +1,8 @@
 # doestyle (development version)
 
 * Include a copy of the Public Sans font family (@gardiners)
+* `get_colours()` now preserves the names of its arguments, making it easier to
+  use for the `values` argument within `ggplot2::scale_*_manual` (@gardiners)
 
 # doestyle 0.3.0
 

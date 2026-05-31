@@ -22,6 +22,15 @@ test_that("colour names survive a round trip to hex values", {
                expected = colourdata$colour_name)
 })
 
+test_that("explicitly named arguments to get_colours are preserved", {
+  expect_named({get_colours("Name A" = "blue-01", "Name B" = "red-02")},
+               expected = c("Name A", "Name B"))
+  expect_named({get_colours(c("Name A" = "red-01", "Name B" = "red-04"))})
+  expect_named({get_colours("red-04", "grey-01")},
+               expected = NULL)
+  expect_warning({get_colours("Name A" = "blue-02", "red-01")})
+})
+
 # Tests for hex values
 
 test_that("get_colour_names requires at least one hex value", {
