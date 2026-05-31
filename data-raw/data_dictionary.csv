@@ -1,0 +1,47 @@
+logical_path,data_element_id,concept_id,property_id,property_name
+School_code,9622,9552,9551,School Identifier
+AgeID,9290,9552,9551,School Identifier
+School_name,9292,9550,9549,School Name
+Street,9565,9564,292741,Address Line
+Town_suburb,9567,9566,269335,Locality Name
+Postcode,9558,9557,11519,Postcode
+Phone,9569,9568,8504,Telephone Number
+School_Email,9571,9570,8418,Email Address
+Website,9630,9629,8507,Web Address
+Fax,9634,9633,9632,Facsimile Number
+latest_year_enrolment_FTE,12132,11750,9661,Student Enrolments
+Indigenous_pct,12051,12050,12049,Proportion of Student Enrolments by Aboriginality
+LBOTE_pct,12056,12055,12054,Proportion of Student Enrolments by LBOTE
+ICSEA_value,9294,9310,9309,Index of Community Socio-Educational Advantage (ICSEA)
+Level_of_schooling,9523,9556,9555,School Type
+Selective_school,9673,9672,9670,Selective School Status
+Opportunity_class,9676,9675,9674,Opportunity Class Flag
+School_specialty_type,9680,9679,9677,School Speciality
+School_subtype,9525,9562,9561,School Subtype
+Support_classes,NA,NA,NA,NA
+Preschool_ind,9683,9682,9681,Preschool Flag
+Distance_education,9687,9685,9684,Distance Education Flag
+Intensive_english_centre,9690,9689,9688,Intensive English Centre Flag
+School_gender,9658,9656,9655,School Gender Type
+Late_opening_school,9654,9652,9651,Late Start School Flag
+Date_1st_teacher,9693,9692,9691,First Teacher Duty Date
+LGA,12047,9572,789,Local Government Area
+electorate_from_2023,9608,9607,790,New South Wales State Electorate
+electorate_2015_2022,12048,9607,790,New South Wales State Electorate
+Fed_electorate_2016_2024,9610,9609,4020,Federal Electorate
+Fed_electorate_from_2025,17582,9609,4020,Federal Electorate
+Operational_directorate,9592,9591,9589,Directorate Name
+Principal_network,9588,9587,9586,Principal Network Name
+Operational_directorate_office,11900,11813,9581,Performance Directorate Office Name
+Operational_directorate_office_phone,9596,9595,8504,Telephone Number
+Operational_directorate_office_address,9594,9593,292741,Address Line
+FACS_district,11902,11901,788,NSW Department of Communities and Justice District
+Local_health_district,9605,9604,9602,NSW Local Health District
+AECG_region,9600,9599,9598,AECG Region
+ASGS_remoteness,9317,9560,9559,Remoteness Area
+Latitude,9575,9574,430352,Geocode Latitude
+Longitude,9577,9576,430459,Geocode Longitude
+Assets unit,9697,9696,9694,Asset Management District
+SA4,12130,9578,457283,Statistical Area
+FOEI_value,9322,9321,9320,Family Occupation and Education Index
+Date_extracted,12149,867,863,Report Extraction Date

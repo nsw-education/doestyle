@@ -5,6 +5,8 @@
   use for the `values` argument within `ggplot2::scale_*_manual` (@gardiners)
 * Use default on-brand colours when `theme_doe()` is applied without a colour or
   fill scale (@gardiners)
+* The included demo dataset, `public_schools`, now has column label metadata
+  (@gardiners)
 
 # doestyle 0.3.0
 
