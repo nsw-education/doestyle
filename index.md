@@ -82,7 +82,7 @@ with no arguments:
 
 public_schools |>
   filter(Operational_directorate == "Metropolitan South and West") |>
-  ggplot(aes(x = LBOTE_pct, y = FOEI_Value, colour = Intensive_english_centre)) +
+  ggplot(aes(x = LBOTE_pct, y = ICSEA_value, colour = Intensive_english_centre)) +
   geom_point() +
   # Add a default department scale to the `colour` aesthetic. Note that `colour`
   # has already been mapped onto the value of `Intensive_english_centre` in this
@@ -90,7 +90,7 @@ public_schools |>
   scale_colour_doe()
 ```
 
-![](./reference/figures/README-fig-lbote-foei-iec-scatter-1.png)
+![](./reference/figures/README-fig-lbote-icsea-iec-scatter-1.png)
 
 An on-brand default fill scale can be applied with
 [`scale_fill_doe()`](https://nsw-education.github.io/doestyle/reference/scale_fill_doe.md).

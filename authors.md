@@ -28,13 +28,13 @@ Source:
 [`DESCRIPTION`](https://github.com/nsw-education/doestyle/blob/main/DESCRIPTION)
 
 Gardiner S, Finkbeiner M, McGuire J (2026). *doestyle: NSW Department of
-Education branding for figures and tables*. R package version
-0.3.0.9000, <https://nsw-education.github.io/doestyle/>.
+Education branding for figures and tables*. R package version 0.4.0,
+<https://nsw-education.github.io/doestyle/>.
 
     @Manual{,
       title = {doestyle: NSW Department of Education branding for figures and tables},
       author = {Samuel Gardiner and Matthew Finkbeiner and Jonathan McGuire},
       year = {2026},
-      note = {R package version 0.3.0.9000},
+      note = {R package version 0.4.0},
       url = {https://nsw-education.github.io/doestyle/},
     }

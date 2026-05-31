@@ -18,6 +18,9 @@ Useful links:
 
 Authors:
 
+- Samuel Gardiner <samuel.gardiner7@det.nsw.edu.au>
+  ([ORCID](https://orcid.org/0000-0002-6752-6969))
+
 - Matthew Finkbeiner ([ORCID](https://orcid.org/0000-0003-0373-8150))
 
 - Jonathan McGuire

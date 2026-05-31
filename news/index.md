@@ -1,8 +1,17 @@
 # Changelog
 
-## doestyle (development version)
+## doestyle 0.4.0
 
 - Include a copy of the Public Sans font family (1)
+- [`get_colours()`](https://nsw-education.github.io/doestyle/reference/get_colours.md)
+  now preserves the names of its arguments, making it easier to use for
+  the `values` argument within `ggplot2::scale_*_manual` (1)
+- Use default on-brand colours when
+  [`theme_doe()`](https://nsw-education.github.io/doestyle/reference/theme_doe.md)
+  is applied without a colour or fill scale (1)
+- The included demo dataset, `public_schools`, now has column label
+  metadata
+  1.  
 
 ## doestyle 0.3.0
 
