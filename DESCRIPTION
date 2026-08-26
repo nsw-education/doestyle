@@ -1,6 +1,6 @@
 Package: doestyle
 Title: NSW Department of Education branding for figures and tables
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: c(
     person("Samuel", "Gardiner", email = "samuel.gardiner7@det.nsw.edu.au",
         role = c("aut", "cre"),
@@ -24,7 +24,7 @@ Imports:
     cli,
     dplyr,
     flextable,
-    ggplot2,
+    ggplot2 (>= 4.0.0),
     palettes,
     officer,
     purrr,

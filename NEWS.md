@@ -1,3 +1,9 @@
+# doestyle 0.4.1
+
+## Fixes
+
+* Explicitly depend on `ggplot2` version >= 4.0.0 (#35, @gardiners).
+
 # doestyle 0.4.0
 
 * Include a copy of the Public Sans font family (@gardiners)
