@@ -1,5 +1,12 @@
 # Changelog
 
+## doestyle 0.4.1
+
+### Fixes
+
+- Explicitly depend on `ggplot2` version \>= 4.0.0
+  ([\#35](https://github.com/nsw-education/doestyle/issues/35), 1).
+
 ## doestyle 0.4.0
 
 - Include a copy of the Public Sans font family (1)
